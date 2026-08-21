@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bscmqod57i12"]
+
+[ext_resource type="Script" uid="uid://dkrhegl3klc0h" path="res://Scripts/tree.gd" id="1_0vwjc"]
+
+[node name="Tree" type="Sprite2D" unique_id=1052018898]
+scale = Vector2(4, 4)
+script = ExtResource("1_0vwjc")

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b14uuyn7dc2w4"]
+
+[ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="1_ys0gr"]
+
+[node name="Item" type="Sprite2D" unique_id=83697969]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ys0gr")

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://buuuxhl3up1g"]
+
+[ext_resource type="Script" uid="uid://c6eplqudfh5bv" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://cam6e3k3gppqa" path="res://Assets/conveyerTemp.png" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="3_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://dwryli2eikleq" path="res://Assets/broken.jpg" id="4_2246s"]
+
+[node name="UI" type="Control" unique_id=2135841862]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxero")
+
+[node name="HoverIcon" type="TextureRect" parent="." unique_id=1251211738]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ZoomSlider" type="VSlider" parent="." unique_id=286886995]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -239.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+min_value = 0.01
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="ConveyorButton" type="TextureButton" parent="." unique_id=1160794579]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -54.0
+offset_right = 224.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_qdvrb")
+
+[node name="ItemButton" type="TextureButton" parent="." unique_id=769015338]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -54.0
+offset_right = 40.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("3_nf4gj")
+
+[node name="DestroyButton" type="TextureButton" parent="." unique_id=1604636513]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.00006
+offset_top = -57.0
+offset_right = 470.0
+offset_bottom = 497.00012
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4_2246s")
+
+[connection signal="pressed" from="ConveyorButton" to="." method="_on_conveyor_button_pressed"]
+[connection signal="pressed" from="ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="DestroyButton" to="." method="_on_destroy_button_pressed"]
