@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b14uuyn7dc2w4"]
 
 [ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="1_ys0gr"]
+[ext_resource type="Script" uid="uid://2o1gh51r2g1t" path="res://Scripts/item.gd" id="2_76mu4"]
 
 [node name="Item" type="Sprite2D" unique_id=83697969]
 scale = Vector2(2, 2)
 texture = ExtResource("1_ys0gr")
+script = ExtResource("2_76mu4")

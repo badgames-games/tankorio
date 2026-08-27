@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+# MNAKE IT SO YOU SPAWN ON SAND BY DOING RANDOM POSITIONS UNTIL YOU DO
+
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
 @onready var camera: Camera2D = $Camera2D
@@ -16,6 +18,26 @@ var very_slow_terrain := [
 	Vector2i(2, 2), Vector2i(2, 3), Vector2i(3, 2), Vector2i(3, 3), 
 ]
 
+
+func _ready() -> void:
+	while true:
+		await get_tree().create_timer(0.01).timeout
+		
+		var pos = Vector2(randi_range(32768, -32768), randi_range(32768, -32768))
+		
+		var terrain_pos = terrain_layer.to_local(pos)
+		var terrain_grid_pos = terrain_layer.local_to_map(terrain_pos)
+		var terrain_source_id = terrain_layer.get_cell_source_id(terrain_grid_pos)
+		
+		if terrain_source_id != 1:
+			return
+		
+		var terrain_atlas_coords = terrain_layer.get_cell_atlas_coords(terrain_grid_pos)
+		if not very_slow_terrain.has(terrain_atlas_coords) and not slow_terrain.has(terrain_atlas_coords):
+			position = pos
+			return
+
+
 func _physics_process(delta: float) -> void:
 	var moveDir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = moveDir * (LOWEST_SPEED + Global.additional_speed)
@@ -30,7 +52,7 @@ func _physics_process(delta: float) -> void:
 			Global.additional_speed += 200.0
 	
 	move_and_slide()
-	
+
 
 func check_terrain() -> void:
 	var terrain_player_pos = terrain_layer.to_local(self.global_position)

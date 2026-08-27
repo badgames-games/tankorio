@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwryli2eikleq"
-path="res://.godot/imported/broken.jpg-a064ad2152beef391d849a1ac7c13ddc.ctex"
+uid="uid://dk5jda0gy4erw"
+path="res://.godot/imported/conveyorIcon.png-895057aeb118050509fb22b46ae70d5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/broken.jpg"
-dest_files=["res://.godot/imported/broken.jpg-a064ad2152beef391d849a1ac7c13ddc.ctex"]
+source_file="res://Assets/conveyorIcon.png"
+dest_files=["res://.godot/imported/conveyorIcon.png-895057aeb118050509fb22b46ae70d5c.ctex"]
 
 [params]
 

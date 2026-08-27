@@ -48,7 +48,7 @@ func _ready() -> void:
 					if mf > 0.35:
 						set_cell(Vector2i(x, y), 1, mud)
 						tree_inst(pos, "mud")
-					elif mf > -0.35:
+					elif mf > -0.1:
 						set_cell(Vector2i(x, y), 1, forest)
 					else:
 						set_cell(Vector2i(x, y), 1, grass)
@@ -62,7 +62,7 @@ func _ready() -> void:
 					if mf > 0.35:
 						set_cell(Vector2i(x, y), 1, mud)
 						tree_inst(pos, "mud")
-					elif mf > -0.35:
+					elif mf > -0.1:
 						set_cell(Vector2i(x, y), 1, forest)
 					else:
 						set_cell(Vector2i(x, y), 1, grass)
