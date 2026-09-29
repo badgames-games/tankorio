@@ -1,3 +1,6 @@
-res://Scripts/ui.gd
 res://Scenes/game.tscn
+res://Scripts/ore_layer.gd
 res://Scripts/building_layer.gd
+res://Scenes/ui.tscn
+res://Scripts/ui.gd
+res://Scripts/item.gd

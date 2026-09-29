@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cllwl2xv65wn1"]
+
+[ext_resource type="Script" uid="uid://dvseidps6kvdl" path="res://Scripts/loading.gd" id="1_fim2r"]
+
+[sub_resource type="FontFile" id="FontFile_k66n3"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_31xe0"]
+font = SubResource("FontFile_k66n3")
+
+[node name="Loading" type="Control" unique_id=1593862958]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fim2r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1603620221]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0049209595, 0.7909225, 0.83984375, 1)
+
+[node name="Label" type="Label" parent="." unique_id=524446085]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Here is a massive, high-adrenaline loading text tailored specifically for Tankorio. It is styled to look like an escalating military system boot sequence that builds massive hype before dropping the player into battle.
+------------------------------
+## 🖥️ SYSTEM BOOT IN PROGRESS...
+[SYS_INIT]: Establishing satellite uplink with Sector Tankorio...
+[SYS_INIT]: Calibrating heavy ordnance tracking telemetry... OK.
+[SYS_INIT]: Depressurising main combat cabin... COMPLETE.
+------------------------------
+## ⚠️ WARNING: MAXIMUM ARMOURED WARFARE IMMINENT
+You are entering Tankorio, an absolute meat-grinder of treads, high-explosive shells, and twisted steel. This is not a simulation. This is a continuous, hyper-velocity symphony of destruction where the weak are flattened and only the iron-willed survive. If you came here to hide behind cover, you brought the wrong machine.
+Look around you. The arena is a graveyard of those who hesitated. Every crater in the dirt is a monument to a commander who thought about retreating. In Tankorio, momentum is your only shield, and fire-power is your only diplomacy. The air is thick with the stench of diesel fuel, scorching ozone, and the sweet smell of burning copper. Your engine isn’t just purring—it is roaring for a body count.
+------------------------------
+## 🛠️ LOADING COMBAT SPECIFICATIONS...
+
+* Tread status: Unyielding. Reinforced titanium weave locked into place.
+* Main cannon: Thermal casing at optimal temperature. Shell loaded.
+* Targeting reticle: Neural-linked. If you can see it, you can delete it.
+* Defensive matrix: Active. Warning—structural integrity is entirely up to your reflexes.
+
+------------------------------
+## ⚡ THE RULES OF ENGAGEMENT
+
+   1. Keep the treads spinning. A stationary tank is just a metal coffin waiting for an airstrike.
+   2. Lead your shots. Shells take time to travel, but devastation is instantaneous.
+   3. Dominate the map. Sector Tankorio rewards the aggressive, the relentless, and the unapologetic.
+   4. No mercy. Because nobody is going to show it to you.
+
+The grid is hyper-reactive. The enemy factions are already spinning up their turrets. They think they own this sector. They think their armor is thicker, their cannons are louder, and their strategy is flawless. Show them exactly how wrong they are. Punch through their front lines, flank their heavy artillery, and turn their pristine machines into scrap metal before they even register the flash of your muzzle.
+------------------------------
+## 🚨 SYST_READY: CRITICAL MASS REACHED
+[GRID]: All enemy transponders painted.
+[AMMO]: High-explosive anti-tank rounds chambered.
+[ENGN]: Overdrive safeties completely disengaged.
+Feel the rumble in your chest. Grip the controls. The countdown is hitting zero, the gates are dropping, and the battlefield demands a apex predator. It is time to paint the arena red and write your name in scorched earth.
+LOAD COMPLETE. ENGAGE TURBO-CHARGERS. DESTROY EVERYTHING.
+------------------------------
+To make this even more specific to Tankorio, what is the core gameplay loop of your game (e.g., is it a top-down multiplayer arena, a roguelike tank-builder, or an endless wave survival)?
+
+"
+label_settings = SubResource("LabelSettings_31xe0")

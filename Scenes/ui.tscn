@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bhrbur2m6723k" path="res://Assets/conveyor.png" id="2_q7pk6"]
 [ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="3_nf4gj"]
 [ext_resource type="Texture2D" uid="uid://dwryli2eikleq" path="res://Assets/destroy.jpg" id="4_2246s"]
+[ext_resource type="Texture2D" uid="uid://blaucjv12bq5m" path="res://Assets/miner.jpg" id="6_m78vo"]
 
 [node name="UI" type="Control" unique_id=2135841862]
 layout_mode = 3
@@ -13,9 +14,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_jxero")
 
-[node name="HoverIcon" type="Sprite2D" parent="." unique_id=338829574]
+[node name="ConveyorHoverIcon" type="Sprite2D" parent="." unique_id=338829574]
 modulate = Color(1, 1, 1, 0.5)
 texture = ExtResource("2_q7pk6")
 hframes = 4
@@ -88,6 +90,23 @@ grow_vertical = 0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("4_2246s")
 
+[node name="MinerButton" type="TextureButton" parent="." unique_id=775622833]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -141.99997
+offset_top = -51.99994
+offset_right = 370.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("6_m78vo")
+
 [connection signal="pressed" from="ConveyorButton" to="." method="_on_conveyor_button_pressed"]
 [connection signal="pressed" from="ItemButton" to="." method="_on_item_button_pressed"]
 [connection signal="pressed" from="DestroyButton" to="." method="_on_destroy_button_pressed"]
+[connection signal="pressed" from="MinerButton" to="." method="_on_miner_button_pressed"]

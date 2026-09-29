@@ -2,7 +2,7 @@ extends Control
 
 @onready var camera: Camera2D = $"../../Player/Camera2D"
 @onready var zoom_slider: VSlider = $ZoomSlider
-@onready var hover_icon: Sprite2D = $HoverIcon
+@onready var conveyor_hover_icon: Sprite2D = $ConveyorHoverIcon
 @onready var game_node: Node2D = $"../.."
 @onready var canvas_layer: CanvasLayer = $".."
 @onready var item_layer: Node2D = $"../../Items"
@@ -32,12 +32,21 @@ const CONVEYOR_TILES: Dictionary = {
 const ROTATION_ORDER := [2, 3, 7, 6]
 var rotation_order_index: int = 0
 
+var is_slider_interacting: bool = false
 
 func _ready() -> void:
-	pass
+	zoom_slider.gui_input.connect(_on_slider_gui_input)
 
 
-func _input(event: InputEvent) -> void:
+func _on_slider_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			is_slider_interacting = true
+		else:
+			is_slider_interacting = false
+
+
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
 		if Global.hover_icon == "Iron":
 			inst(item_layer.get_global_mouse_position())
@@ -52,19 +61,21 @@ func _input(event: InputEvent) -> void:
 				
 				var id = ROTATION_ORDER[rotation_order_index]
 				
-				hover_icon.frame = id
-				print("Rotated to:" + "CONVEYOR_" + CONVEYOR_TILES.find_key(id))
+				conveyor_hover_icon.frame = id
 				Global.hover_icon = "CONVEYOR_" + CONVEYOR_TILES.find_key(id)
 
 
 func _process(delta: float) -> void:
-	if check_conveyor(Global.hover_icon) == false and hover_icon.frame != 0:
-		hover_icon.frame = 0
+	if is_slider_interacting and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		is_slider_interacting = false
+	
+	if check_conveyor(Global.hover_icon) == false and conveyor_hover_icon.frame != 0:
+		conveyor_hover_icon.frame = 0
 	
 	if Global.hover_icon != null:
-		hover_icon.visible = true
+		conveyor_hover_icon.visible = true
 	else:
-		hover_icon.visible = false
+		conveyor_hover_icon.visible = false
 	
 	var zoom_amount = zoom_slider.value
 	if zoom_amount >= 1:
@@ -73,16 +84,17 @@ func _process(delta: float) -> void:
 		zoom_amount += 1
 	camera.zoom = Vector2(zoom_amount, zoom_amount)
 	
-	hover_icon.global_position = get_global_mouse_position()
-	hover_icon.scale = Vector2(4, 4) * Vector2(zoom_amount, zoom_amount)
+	conveyor_hover_icon.global_position = get_global_mouse_position()
+	conveyor_hover_icon.scale = Vector2(4, 4) * Vector2(zoom_amount, zoom_amount)
 
 
 func _on_conveyor_button_pressed() -> void:
 	if check_conveyor(Global.hover_icon) == false:
 		Global.hover_icon = "CONVEYOR_" + "STRAIGHT_UP"
-		hover_icon.frame = 2
+		conveyor_hover_icon.frame = 2
 	else:
 		Global.hover_icon = null
+
 
 func _on_item_button_pressed() -> void:
 	if Global.hover_icon != "Iron":
@@ -94,6 +106,13 @@ func _on_item_button_pressed() -> void:
 func _on_destroy_button_pressed() -> void:
 	if Global.hover_icon != "Destroy":
 		Global.hover_icon = "Destroy"
+	else:
+		Global.hover_icon = null
+
+
+func _on_miner_button_pressed() -> void:
+	if Global.hover_icon != "Miner":
+		Global.hover_icon = "Miner"
 	else:
 		Global.hover_icon = null
 

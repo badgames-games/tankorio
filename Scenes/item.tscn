@@ -3,7 +3,26 @@
 [ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="1_ys0gr"]
 [ext_resource type="Script" uid="uid://2o1gh51r2g1t" path="res://Scripts/item.gd" id="2_76mu4"]
 
-[node name="Item" type="Sprite2D" unique_id=83697969]
+[sub_resource type="CircleShape2D" id="CircleShape2D_76mu4"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u06aw"]
+size = Vector2(1, 1)
+
+[node name="Item" type="Area2D" unique_id=617431438]
 scale = Vector2(2, 2)
-texture = ExtResource("1_ys0gr")
+collision_mask = 0
 script = ExtResource("2_76mu4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=933734637]
+texture = ExtResource("1_ys0gr")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1516983501]
+shape = SubResource("CircleShape2D_76mu4")
+
+[node name="BumperDetector" type="Area2D" parent="." unique_id=2108326584]
+collision_layer = 2
+
+[node name="Bumper" type="CollisionShape2D" parent="BumperDetector" unique_id=1277520521]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_u06aw")

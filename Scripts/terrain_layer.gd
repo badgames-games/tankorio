@@ -1,6 +1,7 @@
 extends TileMapLayer
 
 @onready var trees_node: Node2D = $"../Trees"
+@onready var loading: Control = $"../CanvasLayer/Loading"
 
 var map_size = Vector2(65536, 65536)
 
@@ -10,7 +11,9 @@ const TREE = preload("uid://bscmqod57i12")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.position =- Vector2(map_size / 2)
+	loading.show()
+	await get_tree().process_frame
+	position =- Vector2(map_size / 2)
 	
 	var height_noise := FastNoiseLite.new()
 	height_noise.noise_type = FastNoiseLite.TYPE_VALUE_CUBIC
@@ -69,6 +72,7 @@ func _ready() -> void:
 						tree_inst(pos, "forest")
 			else:
 				set_cell(Vector2i(x, y), 1, impassable)
+	loading.queue_free()
 
 
 func tree_inst(pos: Vector2, type: String):
