@@ -30,6 +30,20 @@ const CONVEYOR_TILES: Dictionary = {
 	"CONVEYOR_CW_BOTTOM_RIGHT":  Vector2i(1, 3), # ID 11
 }
 
+const FACTORY_TILES: Dictionary = {
+	"Factory_Light":       [Vector2i(0, 2), Vector2i(1, 2), Vector2i(0, 3), Vector2i(1, 3)],
+	"Factory_Medium":      [Vector2i(2, 2), Vector2i(3, 2), Vector2i(2, 3), Vector2i(3, 3)],
+	"Factory_Heavy":       [Vector2i(4, 2), Vector2i(5, 2), Vector2i(4, 3), Vector2i(5, 3)],
+	"Factory_Super_Heavy": [Vector2i(6, 2), Vector2i(7, 2), Vector2i(6, 3), Vector2i(7, 3)],
+}
+
+const MACHINE_PLACE_ORDER: Array = [
+	Vector2i(0, 0),
+	Vector2i(1, 0),
+	Vector2i(0, 1),
+	Vector2i(1, 1),
+]
+
 var first_click_pos: Vector2
 #
 ## Placed direction -> [offset of the tile BEHIND, {neighbour straight: curve it becomes}]
@@ -129,24 +143,31 @@ func _process(_delta: float) -> void:
 					if source_id == 0:
 						var atlas_coords = get_cell_atlas_coords(grid_pos)
 
-						var block_atlas_origin := Vector2i(12, 0)  # top-left tile of the block in the atlas
+						# Every object in this tileset is a 2x2 block of 16x16 tiles.
+						# Snap the clicked atlas tile down to its block's top-left origin.
 						var block_size := Vector2i(2, 2)
+						var atlas_block_origin := Vector2i(
+							(atlas_coords.x / block_size.x) * block_size.x,
+							(atlas_coords.y / block_size.y) * block_size.y
+						)
 
-						# Which part of the block did we click? (0,0) = top-left ... (1,1) = bottom-right
-						var offset = atlas_coords - block_atlas_origin
+						# Offset of the clicked tile within its block (0,0 to 1,1)
+						var offset = atlas_coords - atlas_block_origin
 
-						if offset.x >= 0 and offset.x < block_size.x and offset.y >= 0 and offset.y < block_size.y:
-							var block_origin = grid_pos - offset  # top-left cell of the block on the map
-							for x in block_size.x:
-								for y in block_size.y:
-									erase_cell(block_origin + Vector2i(x, y))
-							
-							for machine: Area2D in machines_node.get_children():
-								if Vector2i((machine.position - Vector2(64, 64)) / 64) == block_origin:
-									machine.queue_free()
-									continue
-							
-							erased_block = true
+						# Assumes the object is placed on the map in the same 2x2 layout
+						# as it appears in the atlas, so we can find the map-side origin too.
+						var map_block_origin = grid_pos - offset
+
+						for x in block_size.x:
+							for y in block_size.y:
+								erase_cell(map_block_origin + Vector2i(x, y))
+						
+						for machine: Area2D in machines_node.get_children():
+							if Vector2i((machine.position - Vector2(64, 64)) / 64) == map_block_origin:
+								machine.queue_free()
+								continue
+						
+						erased_block = true
 
 					if not erased_block:
 						erase_cell(grid_pos)
@@ -223,17 +244,24 @@ func _process(_delta: float) -> void:
 						#else:
 							#return
 					
-				elif Global.hover_icon == "Miner":
+				else:
 					if source_id == -1:
 						if get_cell_source_id(Vector2i(grid_pos.x + 1, grid_pos.y)) == -1:
 							if get_cell_source_id(Vector2i(grid_pos.x, grid_pos.y + 1)) == -1:
 								if get_cell_source_id(Vector2i(grid_pos.x + 1, grid_pos.y + 1)) == -1:
-									set_cell(grid_pos, 0, Vector2i(12, 0))
-									set_cell(grid_pos + Vector2i(1, 0), 0, Vector2i(13, 0))
-									set_cell(grid_pos + Vector2i(0, 1), 0, Vector2i(12, 1))
-									set_cell(grid_pos + Vector2i(1, 1), 0, Vector2i(13, 1))
+									if Global.hover_icon == "Miner":
+										set_cell(grid_pos, 0, Vector2i(12, 0))
+										set_cell(grid_pos + Vector2i(1, 0), 0, Vector2i(13, 0))
+										set_cell(grid_pos + Vector2i(0, 1), 0, Vector2i(12, 1))
+										set_cell(grid_pos + Vector2i(1, 1), 0, Vector2i(13, 1))
+										
+										machine_inst((get_global_mouse_position() / 64).ceil() * 64, "miner")
 									
-									machine_inst((get_global_mouse_position() / 64).ceil() * 64, "miner")
+									elif FACTORY_TILES.has(Global.hover_icon):
+										for i in FACTORY_TILES[Global.hover_icon].size():
+											set_cell(grid_pos + MACHINE_PLACE_ORDER[i], 0, FACTORY_TILES[Global.hover_icon][i])
+										
+										machine_inst((get_global_mouse_position() / 64).ceil() * 64, "factory")
 
 
 func machine_inst(pos: Vector2, type: String):

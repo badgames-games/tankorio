@@ -20,6 +20,10 @@ var very_slow_terrain := [
 
 
 func _ready() -> void:
+	Global.player_node = self
+	Global.controlled_node = self
+	Global.camera_node = camera_2d
+	
 	await get_tree().process_frame
 	while true:
 		await get_tree().create_timer(0.01).timeout
@@ -40,19 +44,20 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var moveDir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = moveDir * (LOWEST_SPEED + Global.additional_speed)
-	
-	check_terrain()
-	
-	
-	if Input.is_action_pressed("sprint"):
-		if Global.additional_speed == 100.0:
-			Global.additional_speed += 100.0
-		elif Global.additional_speed == 200.0:
-			Global.additional_speed += 200.0
-	
-	move_and_slide()
+	if Global.controlled_node == self:
+		var moveDir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		velocity = moveDir * (LOWEST_SPEED + Global.additional_speed)
+		
+		check_terrain()
+		
+		
+		if Input.is_action_pressed("sprint"):
+			if Global.additional_speed == 100.0:
+				Global.additional_speed += 100.0
+			elif Global.additional_speed == 200.0:
+				Global.additional_speed += 200.0
+		
+		move_and_slide()
 
 
 func check_terrain() -> void:
@@ -71,3 +76,11 @@ func check_terrain() -> void:
 		Global.additional_speed = 0.0
 	else:
 		Global.additional_speed = 200.0
+
+
+func _on_button_pressed() -> void:
+	if Global.controlled_node != self:
+		Global.controlled_node = self
+		if Global.camera_node != null:
+			Global.camera_node.get_parent().remove_child(Global.camera_node)
+			self.add_child(Global.camera_node)

@@ -4,8 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://dk5jda0gy4erw" path="res://Assets/conveyorIcon.png" id="2_2246s"]
 [ext_resource type="Texture2D" uid="uid://bhrbur2m6723k" path="res://Assets/conveyor.png" id="2_q7pk6"]
 [ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="3_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://8ec6r51mophg" path="res://Assets/Machines.png" id="3_smcll"]
 [ext_resource type="Texture2D" uid="uid://dwryli2eikleq" path="res://Assets/destroy.jpg" id="4_2246s"]
 [ext_resource type="Texture2D" uid="uid://blaucjv12bq5m" path="res://Assets/miner.jpg" id="6_m78vo"]
+[ext_resource type="Texture2D" uid="uid://bxjm7ea2qo70h" path="res://Assets/tankFactory.png" id="8_ryf15"]
+[ext_resource type="Texture2D" uid="uid://bh2h8l52athib" path="res://Assets/Google_Chrome_Logo_2008.svg" id="9_mmixe"]
+[ext_resource type="Texture2D" uid="uid://dtesx437yqru5" path="res://Assets/tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg" id="10_nt8jn"]
+[ext_resource type="Texture2D" uid="uid://dipeju012aswy" path="res://Assets/The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg" id="11_g0wmg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt8jn"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="UI" type="Control" unique_id=2135841862]
 layout_mode = 3
@@ -22,6 +30,14 @@ modulate = Color(1, 1, 1, 0.5)
 texture = ExtResource("2_q7pk6")
 hframes = 4
 vframes = 4
+
+[node name="MachineHoverIcon" type="Sprite2D" parent="." unique_id=640235629]
+modulate = Color(1, 1, 1, 0.5)
+texture = ExtResource("3_smcll")
+offset = Vector2(8, 8)
+hframes = 7
+vframes = 2
+frame = 7
 
 [node name="ZoomSlider" type="VSlider" parent="." unique_id=286886995]
 layout_mode = 1
@@ -56,9 +72,10 @@ offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(3, 3)
+focus_mode = 0
 texture_normal = ExtResource("2_2246s")
 
-[node name="ItemButton" type="TextureButton" parent="." unique_id=769015338]
+[node name="IronButton" type="TextureButton" parent="." unique_id=769015338]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -72,6 +89,7 @@ offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(3, 3)
+focus_mode = 0
 texture_normal = ExtResource("3_nf4gj")
 
 [node name="DestroyButton" type="TextureButton" parent="." unique_id=1604636513]
@@ -88,6 +106,7 @@ offset_bottom = 497.00012
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.1, 0.1)
+focus_mode = 0
 texture_normal = ExtResource("4_2246s")
 
 [node name="MinerButton" type="TextureButton" parent="." unique_id=775622833]
@@ -104,9 +123,112 @@ offset_bottom = 460.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.1, 0.1)
+focus_mode = 0
 texture_normal = ExtResource("6_m78vo")
 
+[node name="FactoryButton" type="TextureButton" parent="." unique_id=353173819]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = -58.0
+offset_right = 523.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.1255, 0.1255)
+focus_mode = 0
+texture_normal = ExtResource("8_ryf15")
+
+[node name="ChromiumButton" type="TextureButton" parent="." unique_id=2094302558]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 134.0
+offset_top = -58.0
+offset_right = 646.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.1125, 0.1125)
+focus_mode = 0
+texture_normal = ExtResource("9_mmixe")
+
+[node name="MenuButton" type="TextureButton" parent="." unique_id=1379558846]
+layout_mode = 1
+offset_right = 1500.0
+offset_bottom = 1125.0
+scale = Vector2(0.057, 0.057)
+focus_mode = 0
+texture_normal = ExtResource("10_nt8jn")
+
+[node name="TankButton" type="TextureButton" parent="." unique_id=398442711]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -29.00003
+offset_right = 640.0
+offset_bottom = 417.0
+grow_vertical = 2
+scale = Vector2(0.1325, 0.1325)
+focus_mode = 0
+texture_normal = ExtResource("11_g0wmg")
+
+[node name="MainMenuScreen" type="Control" parent="." unique_id=1662874305]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MainMenuScreen" unique_id=1348538014]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MainMenuScreen" unique_id=1749270650]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.5
+offset_top = -37.5
+offset_right = 139.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Heading Back to the Main Menu
+
+Don't Worry, your progress is saved!"
+label_settings = SubResource("LabelSettings_nt8jn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="ConveyorButton" to="." method="_on_conveyor_button_pressed"]
-[connection signal="pressed" from="ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="IronButton" to="." method="_on_iron_button_pressed"]
 [connection signal="pressed" from="DestroyButton" to="." method="_on_destroy_button_pressed"]
 [connection signal="pressed" from="MinerButton" to="." method="_on_miner_button_pressed"]
+[connection signal="pressed" from="FactoryButton" to="." method="_on_factory_button_pressed"]
+[connection signal="pressed" from="ChromiumButton" to="." method="_on_chromium_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="TankButton" to="." method="_on_tank_button_pressed"]

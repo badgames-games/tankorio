@@ -1,6 +1,4 @@
-res://Scenes/game.tscn
-res://Scripts/ore_layer.gd
-res://Scripts/building_layer.gd
-res://Scenes/ui.tscn
-res://Scripts/ui.gd
-res://Scripts/item.gd
+res://Scripts/enemy_test_tank.gd
+res://Scenes/tank_test_scene.tscn
+res://Scripts/test_tank.gd
+res://Scenes/enemy_test_tank.tscn

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cjgtcx7vwty05"]
+
+[ext_resource type="Script" uid="uid://728egs0hwf61" path="res://Scripts/tank_test_scene.gd" id="1_l0u1w"]
+[ext_resource type="PackedScene" uid="uid://cddn01b7a7g3j" path="res://Scenes/test_tank.tscn" id="1_xunwi"]
+[ext_resource type="PackedScene" uid="uid://3ftuqn1ky4pu" path="res://Scenes/enemy_test_tank.tscn" id="3_65du1"]
+
+[node name="TankTestScene" type="Node2D" unique_id=1990892155]
+script = ExtResource("1_l0u1w")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=691521687]
+zoom = Vector2(0.5, 0.5)
+
+[node name="TestTank" parent="." unique_id=1659152178 instance=ExtResource("1_xunwi")]
+position = Vector2(-800, 400)
+
+[node name="TestTank2" parent="." unique_id=206338450 instance=ExtResource("1_xunwi")]
+position = Vector2(800, 400)
+
+[node name="EnemyTestTank" parent="." unique_id=511870596 instance=ExtResource("3_65du1")]
+position = Vector2(400, -200)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=55861245]

@@ -3,9 +3,14 @@ extends Area2D
 @onready var building_layer: TileMapLayer = $"../../BuildingLayer"
 @onready var bumper_detector: Area2D = $BumperDetector
 @onready var bumper: CollisionShape2D = $BumperDetector/Bumper
+@onready var iron: Sprite2D = $Iron
+@onready var chromium: Sprite2D = $Chromium
+
+const SPEED = 100
 
 var direction: Vector2 = Vector2(0, 0)
 var overlapping: bool = false
+var type: String
 
 var conveyor_directions = {
 	Vector2i(2, 0): Vector2(0, -1), # UP
@@ -14,9 +19,19 @@ var conveyor_directions = {
 	Vector2i(3, 1): Vector2(0, 1)   # DOWN
 }
 
+
+func _ready() -> void:
+	if type == "Iron":
+		iron.show()
+	elif type == "Chromium":
+		chromium.show()
+	else:
+		iron.show()
+
+
 func _process(delta: float) -> void:
 	conveyor_check()
-	position += direction
+	position += direction * SPEED * delta
 
 
 func conveyor_check() -> void:

@@ -10,7 +10,7 @@ func _on_settings_button_pressed() -> void:
 
 
 func _on_credits_button_pressed() -> void:
-	mega_crash_function()
+	get_tree().change_scene_to_file("res://Scenes/tank_test_scene.tscn")
 
 
 func _on_quit_button_pressed() -> void:
