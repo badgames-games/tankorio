@@ -1,12 +1,10 @@
 extends CharacterBody2D
 
-# MNAKE IT SO YOU SPAWN ON SAND BY DOING RANDOM POSITIONS UNTIL YOU DO
-
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
 @onready var camera: Camera2D = $Camera2D
 
-const LOWEST_SPEED: float = 100.0
+const LOWEST_SPEED: float = 10000.0
 
 var slow_terrain := [
 	Vector2i(0, 0), Vector2i(0, 1), Vector2i(1, 0), Vector2i(1, 1), 
@@ -18,6 +16,7 @@ var very_slow_terrain := [
 	Vector2i(2, 2), Vector2i(2, 3), Vector2i(3, 2), Vector2i(3, 3), 
 ]
 
+var additional_speed: float = 0.0
 
 func _ready() -> void:
 	Global.player_node = self
@@ -46,16 +45,16 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Global.controlled_node == self:
 		var moveDir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-		velocity = moveDir * (LOWEST_SPEED + Global.additional_speed)
+		velocity = moveDir * (LOWEST_SPEED + additional_speed / 2) * delta
 		
 		check_terrain()
 		
 		
 		if Input.is_action_pressed("sprint"):
-			if Global.additional_speed == 100.0:
-				Global.additional_speed += 100.0
-			elif Global.additional_speed == 200.0:
-				Global.additional_speed += 200.0
+			if additional_speed == 10000.0:
+				additional_speed += 10000.0
+			elif additional_speed == 20000.0:
+				additional_speed += 20000.0
 		
 		move_and_slide()
 
@@ -71,11 +70,11 @@ func check_terrain() -> void:
 	var terrain_atlas_coords = terrain_layer.get_cell_atlas_coords(terrain_grid_pos)
 	
 	if slow_terrain.has(terrain_atlas_coords):
-		Global.additional_speed = 100.0
+		additional_speed = 10000.0
 	elif very_slow_terrain.has(terrain_atlas_coords):
-		Global.additional_speed = 0.0
+		additional_speed = 0.0
 	else:
-		Global.additional_speed = 200.0
+		additional_speed = 20000.0
 
 
 func _on_button_pressed() -> void:

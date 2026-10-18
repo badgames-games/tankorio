@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cjgtcx7vwty05"]
 
 [ext_resource type="Script" uid="uid://728egs0hwf61" path="res://Scripts/tank_test_scene.gd" id="1_l0u1w"]
-[ext_resource type="PackedScene" uid="uid://cddn01b7a7g3j" path="res://Scenes/test_tank.tscn" id="1_xunwi"]
-[ext_resource type="PackedScene" uid="uid://3ftuqn1ky4pu" path="res://Scenes/enemy_test_tank.tscn" id="3_65du1"]
+[ext_resource type="PackedScene" uid="uid://cddn01b7a7g3j" path="res://Scenes/player_tank.tscn" id="1_xunwi"]
+[ext_resource type="PackedScene" uid="uid://3ftuqn1ky4pu" path="res://Scenes/enemy_tank.tscn" id="3_65du1"]
 
 [node name="TankTestScene" type="Node2D" unique_id=1990892155]
 script = ExtResource("1_l0u1w")

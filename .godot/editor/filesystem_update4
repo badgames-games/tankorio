@@ -1,4 +1,3 @@
+res://Scenes/victory_screen.tscn
+res://Scenes/victory_screen.gd
 res://Scripts/enemy_test_tank.gd
-res://Scenes/tank_test_scene.tscn
-res://Scripts/test_tank.gd
-res://Scenes/enemy_test_tank.tscn

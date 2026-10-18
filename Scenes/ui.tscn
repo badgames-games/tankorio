@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bh2h8l52athib" path="res://Assets/Google_Chrome_Logo_2008.svg" id="9_mmixe"]
 [ext_resource type="Texture2D" uid="uid://dtesx437yqru5" path="res://Assets/tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg" id="10_nt8jn"]
 [ext_resource type="Texture2D" uid="uid://dipeju012aswy" path="res://Assets/The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg" id="11_g0wmg"]
+[ext_resource type="Texture2D" uid="uid://cxieog2o5rexq" path="res://Assets/thediplomat_2015-07-27_16-29-04.jpg" id="12_4vbiv"]
+[ext_resource type="Texture2D" uid="uid://c17872ig407gj" path="res://Assets/Soviet_Znamya_Pobedy.svg" id="13_3r70p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nt8jn"]
 font_color = Color(0, 0, 0, 1)
@@ -181,6 +183,32 @@ scale = Vector2(0.1325, 0.1325)
 focus_mode = 0
 texture_normal = ExtResource("11_g0wmg")
 
+[node name="EnemyTankButton" type="TextureButton" parent="." unique_id=580204456]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 31.0
+offset_right = 599.0
+offset_bottom = 422.0
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+texture_normal = ExtResource("12_4vbiv")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1736911056]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_right = 480.0
+offset_bottom = 300.0
+grow_horizontal = 0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("13_3r70p")
+
 [node name="MainMenuScreen" type="Control" parent="." unique_id=1662874305]
 visible = false
 layout_mode = 1
@@ -232,3 +260,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="ChromiumButton" to="." method="_on_chromium_button_pressed"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="TankButton" to="." method="_on_tank_button_pressed"]
+[connection signal="pressed" from="EnemyTankButton" to="." method="_on_enemy_tank_button_pressed"]

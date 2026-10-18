@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://3ftuqn1ky4pu"]
+
+[ext_resource type="Script" uid="uid://bi6vsuopoy7n" path="res://Scripts/enemy_test_tank.gd" id="1_44s6k"]
+[ext_resource type="Texture2D" uid="uid://dqjgo5gq3a7id" path="res://Assets/icon.svg" id="2_rels8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2x33v"]
+radius = 500.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4khx"]
+radius = 15000.0
+
+[sub_resource type="ImageTexture" id="ImageTexture_2x33v"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_v4khx"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_tglgl"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_nyscv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fc1h0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(18.892157, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vftpg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 1, 0.11207495, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[node name="EnemyTank" type="CharacterBody2D" unique_id=1659152178]
+collision_layer = 4
+collision_mask = 12
+script = ExtResource("1_44s6k")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1013638106]
+texture = ExtResource("2_rels8")
+
+[node name="Turret" type="Sprite2D" parent="." unique_id=145440761]
+rotation = -1.5707964
+scale = Vector2(1, 0.3125)
+texture = ExtResource("2_rels8")
+offset = Vector2(50, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740785808]
+shape = SubResource("RectangleShape2D_1x1p0")
+
+[node name="FightRadius" type="Area2D" parent="." unique_id=1337164819]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FightRadius" unique_id=12963719]
+shape = SubResource("CircleShape2D_2x33v")
+
+[node name="MoveRadius" type="Area2D" parent="." unique_id=1701383377]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveRadius" unique_id=1375736261]
+shape = SubResource("CircleShape2D_v4khx")
+
+[node name="HealthBar" type="HSlider" parent="." unique_id=377138309]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -150.0
+offset_right = 85.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 2
+theme_override_icons/grabber = SubResource("ImageTexture_2x33v")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_v4khx")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_tglgl")
+theme_override_icons/tick = SubResource("ImageTexture_nyscv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_fc1h0")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_vftpg")
+value = 100.0

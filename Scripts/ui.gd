@@ -11,6 +11,7 @@ extends Control
 @onready var player: CharacterBody2D = $"../../Player"
 
 const TEST_TANK = preload("uid://cddn01b7a7g3j")
+const ENEMY_TANK = preload("uid://3ftuqn1ky4pu")
 const ITEM = preload("uid://b14uuyn7dc2w4")
 const CONVEYOR_TILES: Dictionary = {
 	# Top Hub: Counter-Clockwise (CCW)
@@ -200,6 +201,7 @@ func check_conveyor(string) -> bool:
 	else:
 		return false
 
+
 func check_factory(string) -> bool:
 	var stringed = str(string)
 	var first_letters = stringed.left(7)
@@ -207,3 +209,9 @@ func check_factory(string) -> bool:
 		return true
 	else:
 		return false
+
+
+func _on_enemy_tank_button_pressed() -> void:
+	var instance = ENEMY_TANK.instantiate()
+	instance.position = player.position + Vector2(2500, 0)
+	game_node.add_child(instance)

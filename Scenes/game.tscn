@@ -167,6 +167,7 @@ z_index = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=688184001]
 
 [node name="UI" parent="CanvasLayer" unique_id=2135841862 instance=ExtResource("3_wrm1d")]
+metadata/_edit_use_anchors_ = true
 
 [node name="Loading" parent="CanvasLayer" unique_id=1593862958 instance=ExtResource("10_ldgsr")]
 visible = false
@@ -192,3 +193,5 @@ z_index = 1
 [node name="Items" type="Node2D" parent="." unique_id=350759263]
 
 [node name="Machines" type="Node2D" parent="." unique_id=251385086]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=541979258]

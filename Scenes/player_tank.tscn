@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cddn01b7a7g3j"]
+
+[ext_resource type="Script" uid="uid://d4iejy682ud28" path="res://Scripts/test_tank.gd" id="1_tvyc1"]
+[ext_resource type="Texture2D" uid="uid://dqjgo5gq3a7id" path="res://Assets/icon.svg" id="2_ydfla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_upg88"]
+radius = 1000.0
+
+[sub_resource type="ImageTexture" id="ImageTexture_pu55u"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_1x1p0"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ash6w"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_fx0sv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu55u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(18.892157, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1x1p0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 1, 0.11207495, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[node name="PlayerTank" type="CharacterBody2D" unique_id=1659152178 groups=["PlayerTank"]]
+collision_layer = 8
+collision_mask = 12
+script = ExtResource("1_tvyc1")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1013638106]
+texture = ExtResource("2_ydfla")
+
+[node name="Turret" type="Sprite2D" parent="." unique_id=145440761]
+scale = Vector2(0.3125, 1)
+texture = ExtResource("2_ydfla")
+offset = Vector2(0, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740785808]
+shape = SubResource("RectangleShape2D_1x1p0")
+
+[node name="FightRadius" type="Area2D" parent="." unique_id=519909320]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FightRadius" unique_id=1830772999]
+shape = SubResource("CircleShape2D_upg88")
+
+[node name="HealthBar" type="HSlider" parent="." unique_id=1814529078]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -150.0
+offset_right = 85.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 2
+theme_override_icons/grabber = SubResource("ImageTexture_pu55u")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_1x1p0")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_ash6w")
+theme_override_icons/tick = SubResource("ImageTexture_fx0sv")
+theme_override_styles/slider = SubResource("StyleBoxFlat_pu55u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1x1p0")
+value = 100.0
+
+[node name="Button" type="Button" parent="." unique_id=828386304]
+self_modulate = Color(0.35305238, 0.35305238, 0.35305238, 0)
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
