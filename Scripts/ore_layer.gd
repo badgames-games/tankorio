@@ -10,6 +10,11 @@ var allowed_terrain_atlas_coords := [
 ]
 
 func _ready() -> void:
+	if SaveManager.is_loading:
+		position = -Vector2(map_size / 2)
+		tile_map_data = SaveManager.pending_data["ore"]
+		return
+	
 	await get_tree().process_frame
 	position =- Vector2(map_size / 2)
 	

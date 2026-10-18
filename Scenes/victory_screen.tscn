@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4fw1t4oqlymd"]
 
-[ext_resource type="Script" uid="uid://iadldi0yleqh" path="res://Scenes/victory_screen.gd" id="1_mubwb"]
+[ext_resource type="Script" uid="uid://iadldi0yleqh" path="res://Scripts/victory_screen.gd" id="1_mubwb"]
 [ext_resource type="Texture2D" uid="uid://c17872ig407gj" path="res://Assets/Soviet_Znamya_Pobedy.svg" id="1_oq8vb"]
 
 [node name="VictoryScreen" type="Control" unique_id=602877927]

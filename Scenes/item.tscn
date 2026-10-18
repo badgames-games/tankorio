@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b14uuyn7dc2w4"]
 
-[ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="1_ys0gr"]
+[ext_resource type="Texture2D" uid="uid://d4j3komr3m057" path="res://Assets/iron.png" id="1_ys0gr"]
 [ext_resource type="Script" uid="uid://2o1gh51r2g1t" path="res://Scripts/item.gd" id="2_76mu4"]
-[ext_resource type="Texture2D" uid="uid://bh2h8l52athib" path="res://Assets/Google_Chrome_Logo_2008.svg" id="3_u06aw"]
+[ext_resource type="Texture2D" uid="uid://cmgtyrpbqjxm6" path="res://Assets/chromium.png" id="3_u06aw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_76mu4"]
 radius = 8.0
@@ -17,11 +17,12 @@ script = ExtResource("2_76mu4")
 
 [node name="Iron" type="Sprite2D" parent="." unique_id=933734637]
 visible = false
+scale = Vector2(2, 2)
 texture = ExtResource("1_ys0gr")
 
 [node name="Chromium" type="Sprite2D" parent="." unique_id=987099358]
 visible = false
-scale = Vector2(0.031, 0.031)
+scale = Vector2(2, 2)
 texture = ExtResource("3_u06aw")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1516983501]

@@ -11,6 +11,14 @@ const TREE = preload("uid://bscmqod57i12")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if SaveManager.is_loading:
+		position = -Vector2(map_size / 2)
+		tile_map_data = SaveManager.pending_data["terrain"]
+		for t in SaveManager.pending_data["trees"]:
+			tree_inst(t["pos"], t["type"])
+		loading.queue_free()
+		return
+	
 	loading.show()
 	await get_tree().process_frame
 	position =- Vector2(map_size / 2)

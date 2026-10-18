@@ -10,6 +10,8 @@ size = Vector2(0.25, 31.5)
 
 [node name="Machine" type="Area2D" unique_id=869256539]
 scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_xuuum")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1290579269]
@@ -19,7 +21,7 @@ shape = SubResource("RectangleShape2D_h612m")
 
 [node name="InputChecker" type="Area2D" parent="FactoryParts" unique_id=888055335]
 position = Vector2(-16.25, 0)
-collision_mask = 2
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FactoryParts/InputChecker" unique_id=2134121313]
 shape = SubResource("RectangleShape2D_xuuum")

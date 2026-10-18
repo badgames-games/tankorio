@@ -175,6 +175,7 @@ func _on_iron_button_pressed() -> void:
 func _on_menu_button_pressed() -> void:
 	main_menu_screen.show()
 	await get_tree().create_timer(0.1).timeout
+	game_node.save_game()
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
 
@@ -215,3 +216,26 @@ func _on_enemy_tank_button_pressed() -> void:
 	var instance = ENEMY_TANK.instantiate()
 	instance.position = player.position + Vector2(2500, 0)
 	game_node.add_child(instance)
+
+
+func _on_final_battle_button_pressed() -> void:
+	var instance = ENEMY_TANK.instantiate()
+	instance.position = player.position + Vector2(2500, 0)
+	game_node.add_child(instance)
+	
+	instance = ENEMY_TANK.instantiate()
+	instance.position = player.position + Vector2(3000, 500)
+	game_node.add_child(instance)
+	
+	instance = ENEMY_TANK.instantiate()
+	instance.position = player.position + Vector2(3000, -500)
+	game_node.add_child(instance)
+	
+	instance = ENEMY_TANK.instantiate()
+	instance.position = player.position + Vector2(3500, 1000)
+	game_node.add_child(instance)
+	
+	instance = ENEMY_TANK.instantiate()
+	instance.position = player.position + Vector2(3500, -1000)
+	game_node.add_child(instance)
+	

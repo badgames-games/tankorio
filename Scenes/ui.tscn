@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://c6eplqudfh5bv" path="res://Scripts/ui.gd" id="1_jxero"]
 [ext_resource type="Texture2D" uid="uid://dk5jda0gy4erw" path="res://Assets/conveyorIcon.png" id="2_2246s"]
 [ext_resource type="Texture2D" uid="uid://bhrbur2m6723k" path="res://Assets/conveyor.png" id="2_q7pk6"]
-[ext_resource type="Texture2D" uid="uid://cn3pnx4veuwou" path="res://Assets/iron.png" id="3_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://d4j3komr3m057" path="res://Assets/iron.png" id="3_nf4gj"]
 [ext_resource type="Texture2D" uid="uid://8ec6r51mophg" path="res://Assets/Machines.png" id="3_smcll"]
 [ext_resource type="Texture2D" uid="uid://dwryli2eikleq" path="res://Assets/destroy.jpg" id="4_2246s"]
-[ext_resource type="Texture2D" uid="uid://blaucjv12bq5m" path="res://Assets/miner.jpg" id="6_m78vo"]
-[ext_resource type="Texture2D" uid="uid://bxjm7ea2qo70h" path="res://Assets/tankFactory.png" id="8_ryf15"]
-[ext_resource type="Texture2D" uid="uid://bh2h8l52athib" path="res://Assets/Google_Chrome_Logo_2008.svg" id="9_mmixe"]
+[ext_resource type="Texture2D" uid="uid://ck8iuykca3b7w" path="res://Assets/MinerIcon.png" id="7_3r70p"]
+[ext_resource type="Texture2D" uid="uid://xb0rlh1dp5tt" path="res://Assets/FactoryIcon.png" id="8_8fs27"]
+[ext_resource type="Texture2D" uid="uid://cmgtyrpbqjxm6" path="res://Assets/chromium.png" id="9_3r70p"]
 [ext_resource type="Texture2D" uid="uid://dtesx437yqru5" path="res://Assets/tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg" id="10_nt8jn"]
 [ext_resource type="Texture2D" uid="uid://dipeju012aswy" path="res://Assets/The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg" id="11_g0wmg"]
 [ext_resource type="Texture2D" uid="uid://cxieog2o5rexq" path="res://Assets/thediplomat_2015-07-27_16-29-04.jpg" id="12_4vbiv"]
@@ -67,9 +67,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -24.0
+offset_left = -48.0
 offset_top = -51.0
-offset_right = -8.0
+offset_right = -32.0
 offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -84,13 +84,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -54.0
-offset_right = 40.0
-offset_bottom = -38.0
+offset_left = -566.0
+offset_top = -39.0
+offset_right = -558.0
+offset_bottom = -35.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(3, 3)
+scale = Vector2(6, 6)
 focus_mode = 0
 texture_normal = ExtResource("3_nf4gj")
 
@@ -101,10 +101,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -84.00006
-offset_top = -57.0
-offset_right = 470.0
-offset_bottom = 497.00012
+offset_left = -105.00003
+offset_top = -56.99994
+offset_right = 449.0
+offset_bottom = 497.00024
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.1, 0.1)
@@ -118,15 +118,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -141.99997
-offset_top = -51.99994
-offset_right = 370.0
-offset_bottom = 460.0
+offset_top = -51.0
+offset_right = 32.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.1, 0.1)
+scale = Vector2(1.5, 1.5)
 focus_mode = 0
-texture_normal = ExtResource("6_m78vo")
+texture_normal = ExtResource("7_3r70p")
 
 [node name="FactoryButton" type="TextureButton" parent="." unique_id=353173819]
 layout_mode = 1
@@ -135,15 +134,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 76.0
-offset_top = -58.0
-offset_right = 523.0
-offset_bottom = 389.0
+offset_left = 48.0
+offset_top = -51.0
+offset_right = 80.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.1255, 0.1255)
+scale = Vector2(1.5, 1.5)
 focus_mode = 0
-texture_normal = ExtResource("8_ryf15")
+texture_normal = ExtResource("8_8fs27")
 
 [node name="ChromiumButton" type="TextureButton" parent="." unique_id=2094302558]
 layout_mode = 1
@@ -152,15 +151,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 134.0
-offset_top = -58.0
-offset_right = 646.0
-offset_bottom = 432.0
+offset_left = -511.0
+offset_top = -53.0
+offset_right = -503.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.1125, 0.1125)
+scale = Vector2(6, 6)
 focus_mode = 0
-texture_normal = ExtResource("9_mmixe")
+texture_normal = ExtResource("9_3r70p")
 
 [node name="MenuButton" type="TextureButton" parent="." unique_id=1379558846]
 layout_mode = 1
@@ -197,7 +196,7 @@ scale = Vector2(0.15, 0.15)
 focus_mode = 0
 texture_normal = ExtResource("12_4vbiv")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1736911056]
+[node name="FinalBattleButton" type="TextureButton" parent="." unique_id=1736911056]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -261,3 +260,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="TankButton" to="." method="_on_tank_button_pressed"]
 [connection signal="pressed" from="EnemyTankButton" to="." method="_on_enemy_tank_button_pressed"]
+[connection signal="pressed" from="FinalBattleButton" to="." method="_on_final_battle_button_pressed"]

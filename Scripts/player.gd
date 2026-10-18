@@ -23,6 +23,9 @@ func _ready() -> void:
 	Global.controlled_node = self
 	Global.camera_node = camera_2d
 	
+	if SaveManager.is_loading:
+		return
+	
 	await get_tree().process_frame
 	while true:
 		await get_tree().create_timer(0.01).timeout

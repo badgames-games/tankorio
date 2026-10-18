@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hde1uavulpws"]
 
 [ext_resource type="Texture2D" uid="uid://dv78fcoukqjtd" path="res://Assets/WorldTerrain.png" id="1_i6g32"]
+[ext_resource type="Script" uid="uid://2kgtmbio5ios" path="res://Scripts/game.gd" id="1_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://c6yja5hd1few1" path="res://Scenes/player.tscn" id="1_qxrlw"]
 [ext_resource type="Script" uid="uid://bwjg3gc06i3ri" path="res://Scripts/terrain_layer.gd" id="2_1l0tm"]
 [ext_resource type="Texture2D" uid="uid://bhrbur2m6723k" path="res://Assets/conveyor.png" id="3_1l0tm"]
@@ -145,6 +146,7 @@ normal = Vector2(0, 1)
 distance = -32768.0
 
 [node name="Game" type="Node2D" unique_id=1937161272]
+script = ExtResource("1_o5yvi")
 
 [node name="TerrainLayer" type="TileMapLayer" parent="." unique_id=327220937]
 scale = Vector2(4, 4)
