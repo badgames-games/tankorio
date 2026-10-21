@@ -103,7 +103,18 @@ grow_vertical = 2
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("6_trj04")
 
+[node name="NewSave" type="Button" parent="." unique_id=1905861028]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 82.0
+grow_vertical = 0
+text = "New save"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="NewSave" to="." method="_on_new_save_pressed"]

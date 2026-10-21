@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3ftuqn1ky4pu"]
 
-[ext_resource type="Script" uid="uid://bi6vsuopoy7n" path="res://Scripts/enemy_test_tank.gd" id="1_44s6k"]
+[ext_resource type="Script" uid="uid://bi6vsuopoy7n" path="res://Scripts/enemy_tank.gd" id="1_44s6k"]
 [ext_resource type="Texture2D" uid="uid://dqjgo5gq3a7id" path="res://Assets/icon.svg" id="2_rels8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]

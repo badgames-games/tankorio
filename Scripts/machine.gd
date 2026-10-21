@@ -7,7 +7,31 @@ extends Area2D
 const ITEM = preload("uid://b14uuyn7dc2w4")
 
 var type: String
+var factory_type: String = "Factory_Light"
 var efficiency: int = 0
+
+var deployable_tanks: Array = []
+
+var factory_tank_type := {
+	"Factory_Light": "light",
+	"Factory_Medium": "medium",
+	"Factory_Heavy": "heavy",
+	"Factory_Super_Heavy": "sheavy",
+}
+
+var factory_steel_cost := {
+	"Factory_Light": 4,
+	"Factory_Medium": 30,
+	"Factory_Heavy": 62,
+	"Factory_Super_Heavy": 102,
+}
+
+var factory_chromium_cost := {
+	"Factory_Light": 2,
+	"Factory_Medium": 12,
+	"Factory_Heavy": 25,
+	"Factory_Super_Heavy": 58,
+}
 
 
 func _ready() -> void:
@@ -51,8 +75,8 @@ func _ready() -> void:
 	elif type == "factory":
 		while true:
 			var areas = input_checker.get_overlapping_areas()
-			var items: Array = []
-			var ores: Array = []
+			var steel_items: Array = []
+			var chromium_items: Array = []
 			
 			for area in areas:
 				print(area)
@@ -62,15 +86,27 @@ func _ready() -> void:
 				elif area.get_child(0) is Sprite2D:
 					item = area
 				if item.is_in_group("Item"):
-					var ore = item.type
-					ores.append(ore)
-					items.append(item)
+					if steel_items.has(item) or chromium_items.has(item):
+						continue
+					
+					# Steel is made from the Iron ore items
+					if item.type == "Iron":
+						steel_items.append(item)
+					elif item.type == "Chromium":
+						chromium_items.append(item)
 			
-			if ores.has("Chromium") and ores.has("Iron"):
-				for i in items:
-					i.queue_free()
-				print("Tank created")
+			var steel_needed: int = factory_steel_cost[factory_type]
+			var chromium_needed: int = factory_chromium_cost[factory_type]
+			
+			if steel_items.size() >= steel_needed and chromium_items.size() >= chromium_needed:
+				for i in steel_needed:
+					steel_items[i].queue_free()
+				for i in chromium_needed:
+					chromium_items[i].queue_free()
 				
+				deployable_tanks.append(factory_tank_type[factory_type])
+				print("Tank created: ", factory_tank_type[factory_type])
+			
 			await get_tree().create_timer(0.1).timeout
 
 func item_inst(pos: Vector2, ore):

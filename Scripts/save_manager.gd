@@ -6,13 +6,15 @@ var is_loading: bool = false
 var pending_data: Dictionary = {}
 
 
-func start_new_game() -> void:
-	is_loading = false
-	pending_data = {}
-
-
 func has_save() -> bool:
 	return FileAccess.file_exists(SAVE_PATH)
+
+
+func new_save() -> void:
+	is_loading = false
+	pending_data = {}
+	if has_save():
+		DirAccess.remove_absolute(SAVE_PATH)
 
 
 func write_save(data: Dictionary) -> void:
@@ -36,6 +38,7 @@ func load_from_disk() -> bool:
 	file.close()
 	if typeof(data) != TYPE_DICTIONARY:
 		return false
+	
 	pending_data = data
 	is_loading = true
 	return true

@@ -1,7 +1,8 @@
 extends Area2D
 
-var speed: float = 1000.0
+var speed: float = 2000.0
 var barrel_offset: float = 120.0
+var damage: int = 10
 
 func _ready() -> void:
 	set_as_top_level(true)
@@ -19,5 +20,5 @@ func _physics_process(delta: float) -> void:
 	
 	if bodies.size() > 0:
 		for body in bodies:
-			body.health -= 10
+			body.health -= damage
 		queue_free()

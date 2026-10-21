@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cddn01b7a7g3j"]
 
-[ext_resource type="Script" uid="uid://d4iejy682ud28" path="res://Scripts/test_tank.gd" id="1_tvyc1"]
-[ext_resource type="Texture2D" uid="uid://dqjgo5gq3a7id" path="res://Assets/icon.svg" id="2_ydfla"]
+[ext_resource type="Script" uid="uid://d4iejy682ud28" path="res://Scripts/player_tank.gd" id="1_tvyc1"]
+[ext_resource type="Texture2D" uid="uid://b3ivchkyv8i1s" path="res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png" id="2_ydfla"]
+[ext_resource type="Texture2D" uid="uid://cmjxsvkjlfkbn" path="res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png" id="3_30tft"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]
-size = Vector2(128, 128)
+size = Vector2(84, 164)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_upg88"]
 radius = 1000.0
@@ -46,13 +47,17 @@ collision_layer = 8
 collision_mask = 12
 script = ExtResource("1_tvyc1")
 
-[node name="Body" type="Sprite2D" parent="." unique_id=1013638106]
+[node name="Tank" type="Node2D" parent="." unique_id=1976644674]
+
+[node name="Body" type="Sprite2D" parent="Tank" unique_id=1013638106]
+scale = Vector2(4, 4)
 texture = ExtResource("2_ydfla")
 
-[node name="Turret" type="Sprite2D" parent="." unique_id=145440761]
-scale = Vector2(0.3125, 1)
-texture = ExtResource("2_ydfla")
-offset = Vector2(0, -50)
+[node name="Turret" type="Sprite2D" parent="Tank" unique_id=145440761]
+position = Vector2(0, -14)
+scale = Vector2(4, 4)
+texture = ExtResource("3_30tft")
+offset = Vector2(0, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740785808]
 shape = SubResource("RectangleShape2D_1x1p0")
@@ -90,9 +95,11 @@ value = 100.0
 [node name="Button" type="Button" parent="." unique_id=828386304]
 self_modulate = Color(0.35305238, 0.35305238, 0.35305238, 0)
 z_index = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = -64.0
 offset_top = -64.0
 offset_right = 64.0

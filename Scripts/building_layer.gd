@@ -261,11 +261,12 @@ func _process(_delta: float) -> void:
 										for i in FACTORY_TILES[Global.hover_icon].size():
 											set_cell(grid_pos + MACHINE_PLACE_ORDER[i], 0, FACTORY_TILES[Global.hover_icon][i])
 										
-										machine_inst((get_global_mouse_position() / 64).ceil() * 64, "factory")
+										machine_inst((get_global_mouse_position() / 64).ceil() * 64, "factory", Global.hover_icon)
 
 
-func machine_inst(pos: Vector2, type: String):
+func machine_inst(pos: Vector2, type: String, factory_type: String = "Factory_Light"):
 	var instance = MACHINE.instantiate()
 	instance.position = pos
 	instance.type = type
+	instance.factory_type = factory_type
 	machines_node.add_child(instance)

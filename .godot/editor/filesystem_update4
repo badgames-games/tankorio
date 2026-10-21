@@ -1,1 +1,2 @@
-res://Scenes/enemy_tank.tscn
+res://Scenes/player_tank.tscn
+res://Scripts/player_tank.gd

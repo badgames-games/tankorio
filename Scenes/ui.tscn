@@ -206,6 +206,7 @@ offset_right = 480.0
 offset_bottom = 300.0
 grow_horizontal = 0
 scale = Vector2(0.2, 0.2)
+focus_mode = 0
 texture_normal = ExtResource("13_3r70p")
 
 [node name="MainMenuScreen" type="Control" parent="." unique_id=1662874305]

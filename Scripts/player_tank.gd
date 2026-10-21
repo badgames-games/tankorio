@@ -1,20 +1,20 @@
 extends CharacterBody2D
 
 @onready var scene: Node2D = $".."
-@onready var turret: Sprite2D = $Turret
+@onready var turret: Sprite2D = $Tank/Turret
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
 @onready var health_bar: HSlider = $HealthBar
-@onready var tank_body: Sprite2D = $Body
+@onready var tank_body: Sprite2D = $Tank/Body
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var button: Button = $Button
 @onready var fight_radius: Area2D = $FightRadius
 @onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
+@onready var tank: Node2D = $Tank
 
 const SOVIET_FIRE_SOUND = preload("res://Assets/soviet fire sound.mp3")
 const BULLET = preload("uid://c1o2iwa80al23")
 
 const ROTATE_SPEED = 2
-const SPEED = 15000
 
 var slow_terrain := [
 	Vector2i(0, 0), Vector2i(0, 1), Vector2i(1, 0), Vector2i(1, 1), 
@@ -29,7 +29,107 @@ var very_slow_terrain := [
 var can_fire = true
 var health = 100
 
+var speed: float = 30000.0
+var damage: int = 40
+var reload_time: float = 4.0
+var turret_rotate_speed: float = deg_to_rad(45)
+
 var subtracted_speed: float = 0.0
+
+var tank_textures := {
+	"light": preload("res://Assets/T-70 Hull - Light Tank - Soviet Union.png"),
+	"medium": preload("res://Assets/T-34-85-M Hull - Medium Tank - Soviet Union.png"),
+	"heavy": preload("res://Assets/IS-2 Hull - Heavy Tank - Soviet Union.png"),
+	"sheavy": preload("res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png"),
+}
+
+var turret_textures := {
+	"light": preload("res://Assets/T-70 Turret - Light Tank - Soviet Union.png"),
+	"medium": preload("res://Assets/T-34-85-M Turret - Medium Tank - Soviet Union.png"),
+	"heavy": preload("res://Assets/IS-2 Turret - Heavy Tank - Soviet Union.png"),
+	"sheavy": preload("res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png"),
+}
+
+var turret_position := {
+	"light": Vector2(-4, 0),
+	"medium": Vector2(0, -18),
+	"heavy": Vector2(0, -18),
+	"sheavy": Vector2(0, -14),
+}
+
+var turret_offset := {
+	"light": Vector2(0, -1.5),
+	"medium": Vector2(0, -5),
+	"heavy": Vector2(0, -10),
+	"sheavy": Vector2(0, -14),
+}
+
+var collision_shape_size := {
+	"light": Vector2(32, 60),
+	"medium": Vector2(52, 112),
+	"heavy": Vector2(60, 136),
+	"sheavy": Vector2(84, 164),
+}
+
+var tank_speed := {
+	"light": 30000.0,
+	"medium": 19286.0,
+	"heavy": 12857.0,
+	"sheavy": 8571.0,
+}
+
+var tank_health := {
+	"light": 50,
+	"medium": 500,
+	"heavy": 950,
+	"sheavy": 3100,
+}
+
+var tank_damage := {
+	"light": 40,
+	"medium": 280,
+	"heavy": 590,
+	"sheavy": 920,
+}
+
+var tank_reload := {
+	"light": 4.0,
+	"medium": 7.5,
+	"heavy": 14.0,
+	"sheavy": 20.0,
+}
+
+var tank_turret_speed := {
+	"light": 45,
+	"medium": 32,
+	"heavy": 14,
+	"sheavy": 6,
+}
+
+var tank_type: String = "medium"
+
+func _ready() -> void:
+	apply_tank_type()
+
+
+func apply_tank_type() -> void:
+	speed = tank_speed[tank_type]
+	health = tank_health[tank_type]
+	damage = tank_damage[tank_type]
+	reload_time = tank_reload[tank_type]
+	turret_rotate_speed = deg_to_rad(tank_turret_speed[tank_type])
+	
+	tank_body.texture = tank_textures[tank_type]
+	turret.texture = turret_textures[tank_type]
+	turret.position = turret_position[tank_type]
+	turret.offset = turret_offset[tank_type]
+	
+	var new_shape = RectangleShape2D.new()
+	new_shape.size = collision_shape_size[tank_type]
+	collision_shape_2d.shape = new_shape
+	
+	health_bar.max_value = health
+	health_bar.value = health
 
 
 func check_terrain() -> void:
@@ -43,9 +143,9 @@ func check_terrain() -> void:
 	var terrain_atlas_coords = terrain_layer.get_cell_atlas_coords(terrain_grid_pos)
 	
 	if slow_terrain.has(terrain_atlas_coords):
-		subtracted_speed = 5000.0
+		subtracted_speed = speed * 0.2
 	elif very_slow_terrain.has(terrain_atlas_coords):
-		subtracted_speed = 10000.0
+		subtracted_speed = speed * 0.4
 	else:
 		subtracted_speed = 0.0
 
@@ -60,18 +160,17 @@ func _physics_process(delta: float) -> void:
 		var turret_direction := Input.get_axis("turret_left", "turret_right")
 		
 		if direction:
-			turret.rotation += direction * ROTATE_SPEED * delta
-			tank_body.rotation += direction * ROTATE_SPEED * delta
+			tank.rotation += direction * ROTATE_SPEED * delta
 			collision_shape_2d.rotation += direction * ROTATE_SPEED * delta
 			button.rotation += direction * ROTATE_SPEED * delta
 		
 		if turret_direction:
-			turret.rotation += turret_direction * ROTATE_SPEED * delta
+			turret.rotation += turret_direction * turret_rotate_speed * delta
 		
 		if Input.is_action_pressed("move_up"):
-			velocity = -tank_body.transform.y * (SPEED - subtracted_speed) * delta
+			velocity = -tank.transform.y * (speed - subtracted_speed) * delta
 		elif Input.is_action_pressed("move_down"):
-			velocity = tank_body.transform.y * ((SPEED - subtracted_speed) / 2) * delta
+			velocity = tank.transform.y * ((speed - subtracted_speed) / 2) * delta
 		else:
 			velocity = Vector2(0, 0)
 		
@@ -79,7 +178,7 @@ func _physics_process(delta: float) -> void:
 			if can_fire == true:
 				can_fire = false
 				inst()
-				await get_tree().create_timer(1).timeout
+				await get_tree().create_timer(reload_time).timeout
 				can_fire = true
 		
 		move_and_slide()
@@ -98,16 +197,16 @@ func _physics_process(delta: float) -> void:
 				var index = distances.find(distances.min())
 				var target_angle = global_position.angle_to_point(tanks[index].global_position)
 				
-				turret.rotation = rotate_toward(turret.rotation, target_angle + deg_to_rad(90), ROTATE_SPEED * delta)
+				turret.rotation = rotate_toward(turret.rotation, target_angle + deg_to_rad(90), turret_rotate_speed * delta)
 				
 				if angle_difference(turret.rotation, target_angle) < 0.05 and can_fire == true:
 					can_fire = false
 					inst()
-					await get_tree().create_timer(1).timeout
+					await get_tree().create_timer(reload_time).timeout
 					can_fire = true
 		else:
 			velocity = Vector2.ZERO
-			turret.rotation = rotate_toward(turret.rotation, deg_to_rad(0), ROTATE_SPEED * delta)
+			turret.rotation = rotate_toward(turret.rotation, deg_to_rad(0), turret_rotate_speed * delta)
 			tank_body.rotation = rotate_toward(tank_body.rotation, deg_to_rad(0), ROTATE_SPEED * delta)
 			collision_shape_2d.rotation = rotate_toward(collision_shape_2d.rotation, deg_to_rad(0), ROTATE_SPEED * delta)
 
@@ -130,7 +229,8 @@ func inst():
 	audio_stream_player_2d.play(0)
 	var instance = BULLET.instantiate()
 	instance.position = position
-	instance.rotation = turret.rotation
+	instance.rotation = turret.rotation + tank.rotation
+	instance.damage = damage
 	scene.add_child(instance)
 
 func _on_button_pressed() -> void:
