@@ -220,22 +220,41 @@ func _on_enemy_tank_button_pressed() -> void:
 
 func _on_final_battle_button_pressed() -> void:
 	var instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "heavy"
 	instance.position = player.position + Vector2(2500, 0)
 	game_node.add_child(instance)
 	
 	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "medium"
 	instance.position = player.position + Vector2(3000, 500)
 	game_node.add_child(instance)
 	
 	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "medium"
 	instance.position = player.position + Vector2(3000, -500)
 	game_node.add_child(instance)
 	
 	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "light"
 	instance.position = player.position + Vector2(3500, 1000)
 	game_node.add_child(instance)
 	
 	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "light"
 	instance.position = player.position + Vector2(3500, -1000)
 	game_node.add_child(instance)
 	
+	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "sheavy"
+	instance.position = player.position + Vector2(3500, 0)
+	game_node.add_child(instance)
+	
+	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "heavy"
+	instance.position = player.position + Vector2(4000, 500)
+	game_node.add_child(instance)
+	
+	instance = ENEMY_TANK.instantiate()
+	instance.tank_type = "light"
+	instance.position = player.position + Vector2(4000, -500)
+	game_node.add_child(instance)

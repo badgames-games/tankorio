@@ -1,8 +1,8 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1792550451
+::res://::1792553041
 README.md::TextFile::-1::1787293767::0::1::::<><><>0<>0<><>::
 Tank Texture Reference Sheet.png::CompressedTexture2D::8979226349256758087::1792543258::1792543310::1::::<><><>0<>0<>811f8d53412a9a2ff24cdaf56d1634de<>res://.godot/imported/Tank Texture Reference Sheet.png-7244f54fe22c66fb63d16243832797ab.ctex::
-::res://Assets/::1792544192
+::res://Assets/::1792553482
 background.png::CompressedTexture2D::463221805475633904::1790132277::1790132306::1::::<><><>0<>0<>c4b5d5f0cd9bb415514ad2c666a55deb<>res://.godot/imported/background.png-c6e0edb6ae00a576ddf31b14f0c4bf17.ctex::
 badgames.png::CompressedTexture2D::4866205384214159695::1786941242::1787293827::1::::<><><>0<>0<>60955cb842f9909fd44a49fa871b9b78<>res://.godot/imported/badgames.png-c4653a0225ae34008e50f3c473c04be9.ctex::
 chromium.png::CompressedTexture2D::5628691155619445947::1792307028::1792307033::1::::<><><>0<>0<>1e1fded208f53ae7f22af4a8fbedc918<>res://.godot/imported/chromium.png-2008ed1435288085f23f1a98be570ff7.ctex::
@@ -50,7 +50,7 @@ tempMine.png::CompressedTexture2D::7504927504099029386::1789522984::1789523020::
 terrain.png::CompressedTexture2D::1167244505449698652::1786498851::1787293827::1::::<><><>0<>0<>b0e179b038ce5fdee7bda7c4dee1f05e<>res://.godot/imported/terrain.png-507b750228b4cd0d6f4dce3c6ae26c5e.ctex::
 The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg::CompressedTexture2D::7751998496915205756::1791173412::1791173413::1::::<><><>0<>0<>8ee4f5cfb9b38d33b8fd812a722f27af<>res://.godot/imported/The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg-e39bd1aa805a6f381d76c1f583dd461c.ctex::
 thediplomat_2015-07-27_16-29-04.jpg::CompressedTexture2D::6403968019705839254::1792200342::1792200344::1::::<><><>0<>0<>770d55319506d08e4b3d3a044cf32bcf<>res://.godot/imported/thediplomat_2015-07-27_16-29-04.jpg-40982bd6ecc36b3d3983d540fd4e3d95.ctex::
-Tiger II Hull - Heavy Tank - Nazi Germany.png::CompressedTexture2D::3191069943262470345::1792544187::1792544192::1::::<><><>0<>0<>6832692edbb4160bcc3965ffdcf8094f<>res://.godot/imported/Tiger II Hull - Heavy Tank - Nazi Germany.png-a181259eda7c367615069fa79194c621.ctex::
+Tiger II Hull - Heavy Tank - Nazi Germany.png::CompressedTexture2D::3191069943262470345::1792553482::1792553483::1::::<><><>0<>0<>6832692edbb4160bcc3965ffdcf8094f<>res://.godot/imported/Tiger II Hull - Heavy Tank - Nazi Germany.png-a181259eda7c367615069fa79194c621.ctex::
 Tiger II Turret - Heavy Tank - Nazi Germany.png::CompressedTexture2D::7425388699531931165::1792544191::1792544192::1::::<><><>0<>0<>bfa44ae5bc19531ef07bf60b1884c518<>res://.godot/imported/Tiger II Turret - Heavy Tank - Nazi Germany.png-fd0484410da1f2cbf47506ecf1b74ae1.ctex::
 tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg::CompressedTexture2D::8502243138266099210::1791172400::1791172401::1::::<><><>0<>0<>309f267f059942963a7c360f0ee0e329<>res://.godot/imported/tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg-931ffcda662cf21e6c060093b11104ca.ctex::
 tree1.png::CompressedTexture2D::8221682088845697221::1787271807::1787293827::1::::<><><>0<>0<>1b07535af43f0d1e0150916ebc2dc8b6<>res://.godot/imported/tree1.png-bee06456232c1c7e7aa2f9c68bba732a.ctex::
@@ -60,9 +60,9 @@ tree4.png::CompressedTexture2D::490908996687450354::1787271873::1787293827::1:::
 tree5.png::CompressedTexture2D::5880428814170240586::1787271883::1787293827::1::::<><><>0<>0<>a819038eac57172ccc9ca93eeb9c91d2<>res://.godot/imported/tree5.png-3a47bb4aba45336262e452319d2374ef.ctex::
 tree6.png::CompressedTexture2D::209774950926500347::1787271899::1787293827::1::::<><><>0<>0<>ab1f94a2af72835545150835078de27f<>res://.godot/imported/tree6.png-7fe72aa18d7787e4cf520cee20b961d5.ctex::
 WorldTerrain.png::CompressedTexture2D::8701300572935387725::1787099683::1790923231::1::::<><><>0<>0<>aee52767cb0d1c02c36a5cb088bf8cce<>res://.godot/imported/WorldTerrain.png-3e4d6db9cb49ba03627e9b681c406e12.ctex::
-::res://Scenes/::1792548281
+::res://Scenes/::1792553430
 bullet.tscn::PackedScene::6628307392734308878::1792544900::0::1::::<><><>0<>0<><>::uid://dxpfokgohx2dy::::res://Scripts/bullet.gd<>uid://bkkiwbqs16iys::::res://Assets/Tank Round.png
-enemy_tank.tscn::PackedScene::1976799711027587814::1792366542::0::1::::<><><>0<>0<><>::uid://bi6vsuopoy7n::::res://Scripts/enemy_tank.gd<>uid://dqjgo5gq3a7id::::res://Assets/icon.svg
+enemy_tank.tscn::PackedScene::1976799711027587814::1792553430::0::1::::<><><>0<>0<><>::uid://bi6vsuopoy7n::::res://Scripts/enemy_tank.gd<>uid://blp1pq3tvd5h2::::res://Assets/Tiger II Hull - Heavy Tank - Nazi Germany.png<>uid://dd16cjqdeswav::::res://Assets/Tiger II Turret - Heavy Tank - Nazi Germany.png
 game.tscn::PackedScene::497805388789323122::1792303304::0::1::::<><><>0<>0<><>::uid://dv78fcoukqjtd::::res://Assets/WorldTerrain.png<>uid://2kgtmbio5ios::::res://Scripts/game.gd<>uid://c6yja5hd1few1::::res://Scenes/player.tscn<>uid://bwjg3gc06i3ri::::res://Scripts/terrain_layer.gd<>uid://bhrbur2m6723k::::res://Assets/conveyor.png<>uid://jnyump1q25gi::::res://Assets/ores.png<>uid://bfdu3p231usn6::::res://Scripts/building_layer.gd<>uid://doxfdw31wl34a::::res://Scripts/ore_layer.gd<>uid://buuuxhl3up1g::::res://Scenes/ui.tscn<>uid://8ec6r51mophg::::res://Assets/Machines.png<>uid://cllwl2xv65wn1::::res://Scenes/loading.tscn
 game_over.tscn::PackedScene::6775325568270409460::1792299023::0::1::::<><><>0<>0<><>::uid://cuc7x4mywgwg5::::res://Scripts/game_over.gd
 item.tscn::PackedScene::4272448910984017781::1792307350::0::1::::<><><>0<>0<><>::uid://d4j3komr3m057::::res://Assets/iron.png<>uid://2o1gh51r2g1t::::res://Scripts/item.gd<>uid://cmgtyrpbqjxm6::::res://Assets/chromium.png
@@ -70,15 +70,15 @@ loading.tscn::PackedScene::5568983674930762732::1792476440::0::1::::<><><>0<>0<>
 machine.tscn::PackedScene::5880485060054721841::1792307384::0::1::::<><><>0<>0<><>::uid://c2slpienrh054::::res://Scripts/machine.gd
 main_menu.tscn::PackedScene::5838793402029429009::1792482466::0::1::::<><><>0<>0<><>::uid://gungv7kn1g1e::::res://Assets/background.png<>uid://s81ic0ysffyr::::res://Scripts/main_menu.gd<>uid://8iqojgvmhhvj::::res://Assets/logo.png<>uid://bbdvdkq4ltbpg::::res://Assets/playButton.png<>uid://bhx3q8r6bsu5o::::res://Assets/settingsButton.png<>uid://dtp6tah4qb8uj::::res://Assets/CreditsButton.png<>uid://buueyegjsdga0::::res://Assets/QuitButton.png
 player.tscn::PackedScene::6998788625882926974::1792215027::0::1::::<><><>0<>0<><>::uid://80cmrrmnohhk::::res://Scripts/player.gd<>uid://dqjgo5gq3a7id::::res://Assets/icon.svg
-player_tank.tscn::PackedScene::4990436365923172377::1792548281::0::1::::<><><>0<>0<><>::uid://d4iejy682ud28::::res://Scripts/player_tank.gd<>uid://b3ivchkyv8i1s::::res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png<>uid://cmjxsvkjlfkbn::::res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png
+player_tank.tscn::PackedScene::4990436365923172377::1792553215::0::1::::<><><>0<>0<><>::uid://d4iejy682ud28::::res://Scripts/player_tank.gd<>uid://b3ivchkyv8i1s::::res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png<>uid://cmjxsvkjlfkbn::::res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png
 tank_test_scene.tscn::PackedScene::5418085679558338152::1792215099::0::1::::<><><>0<>0<><>::uid://728egs0hwf61::::res://Scripts/tank_test_scene.gd<>uid://cddn01b7a7g3j::::res://Scenes/player_tank.tscn<>uid://3ftuqn1ky4pu::::res://Scenes/enemy_tank.tscn
 tree.tscn::PackedScene::107491368902028399::1787273504::0::1::::<><><>0<>0<><>::uid://dkrhegl3klc0h::::res://Scripts/tree.gd
 ui.tscn::PackedScene::112727673841350710::1792366535::0::1::::<><><>0<>0<><>::uid://c6eplqudfh5bv::::res://Scripts/ui.gd<>uid://dk5jda0gy4erw::::res://Assets/conveyorIcon.png<>uid://bhrbur2m6723k::::res://Assets/conveyor.png<>uid://d4j3komr3m057::::res://Assets/iron.png<>uid://8ec6r51mophg::::res://Assets/Machines.png<>uid://dwryli2eikleq::::res://Assets/destroy.jpg<>uid://ck8iuykca3b7w::::res://Assets/MinerIcon.png<>uid://xb0rlh1dp5tt::::res://Assets/FactoryIcon.png<>uid://cmgtyrpbqjxm6::::res://Assets/chromium.png<>uid://dtesx437yqru5::::res://Assets/tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg<>uid://dipeju012aswy::::res://Assets/The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg<>uid://cxieog2o5rexq::::res://Assets/thediplomat_2015-07-27_16-29-04.jpg<>uid://c17872ig407gj::::res://Assets/Soviet_Znamya_Pobedy.svg
 victory_screen.tscn::PackedScene::9206443653235849299::1792300953::0::1::::<><><>0<>0<><>::uid://iadldi0yleqh::::res://Scripts/victory_screen.gd<>uid://c17872ig407gj::::res://Assets/Soviet_Znamya_Pobedy.svg
-::res://Scripts/::1792550442
+::res://Scripts/::1792553430
 building_layer.gd::GDScript::2744823208097824033::1792550329::0::1::::<>TileMapLayer<><>0<>0<><>::
 bullet.gd::GDScript::8804900242292159058::1792550327::0::1::::<>Area2D<><>0<>0<><>::
-enemy_tank.gd::GDScript::88624571091384781::1792308175::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy_tank.gd::GDScript::88624571091384781::1792553430::0::1::::<>CharacterBody2D<><>0<>0<><>::
 game.gd::GDScript::1916141420016651038::1792303211::0::1::::<>Node2D<><>0<>0<><>::
 game_over.gd::GDScript::6182732555518227026::1792298530::0::1::::<>Control<><>0<>0<><>::
 global.gd::GDScript::7941339802069941862::1792215834::0::1::::<>Node<><>0<>0<><>::
@@ -88,7 +88,7 @@ machine.gd::GDScript::6705794045994859109::1792550328::0::1::::<>Area2D<><>0<>0<
 main_menu.gd::GDScript::1333116724313240797::1792482430::0::1::::<>Control<><>0<>0<><>::
 ore_layer.gd::GDScript::8189696692680091330::1792303304::0::1::::<>TileMapLayer<><>0<>0<><>::
 player.gd::GDScript::2367985067140738324::1792303430::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player_tank.gd::GDScript::9211513788716511347::1792550324::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_tank.gd::GDScript::9211513788716511347::1792550610::0::1::::<>CharacterBody2D<><>0<>0<><>::
 save_manager.gd::GDScript::3523325477662104040::1792482399::0::1::::<>Node<><>0<>0<><>::
 tank_test_scene.gd::GDScript::2303792343806254988::1791174371::0::1::::<>Node2D<><>0<>0<><>::
 terrain_layer.gd::GDScript::3949569267109656458::1792303333::0::1::::<>TileMapLayer<><>0<>0<><>::

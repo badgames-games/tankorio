@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://3ftuqn1ky4pu"]
 
 [ext_resource type="Script" uid="uid://bi6vsuopoy7n" path="res://Scripts/enemy_tank.gd" id="1_44s6k"]
-[ext_resource type="Texture2D" uid="uid://dqjgo5gq3a7id" path="res://Assets/icon.svg" id="2_rels8"]
+[ext_resource type="Texture2D" uid="uid://b4ovpegc6tibi" path="res://Assets/Maus Hull - Super Heavy Tank - Nazi Germany.png" id="2_rels8"]
+[ext_resource type="Texture2D" uid="uid://5qb4n1qwwivt" path="res://Assets/Maus Turret - Super Heavy Tank - Nazi Germany.png" id="3_cbe8q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]
-size = Vector2(128, 128)
+size = Vector2(68, 180)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2x33v"]
 radius = 500.0
@@ -44,19 +45,54 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 6
 
+[sub_resource type="ImageTexture" id="ImageTexture_rels8"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_cbe8q"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_8rgy7"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_2ro7y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnw4e"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ioseo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
 [node name="EnemyTank" type="CharacterBody2D" unique_id=1659152178 groups=["EnemyTank"]]
 collision_layer = 4
 collision_mask = 12
 script = ExtResource("1_44s6k")
 
-[node name="Body" type="Sprite2D" parent="." unique_id=1013638106]
+[node name="Tank" type="Node2D" parent="." unique_id=41111545]
+
+[node name="Body" type="Sprite2D" parent="Tank" unique_id=1013638106]
+scale = Vector2(4, 4)
 texture = ExtResource("2_rels8")
 
-[node name="Turret" type="Sprite2D" parent="." unique_id=145440761]
-rotation = -1.5707964
-scale = Vector2(1, 0.3125)
-texture = ExtResource("2_rels8")
-offset = Vector2(50, 0)
+[node name="Turret" type="Sprite2D" parent="Tank" unique_id=145440761]
+position = Vector2(0, 20)
+scale = Vector2(4, 4)
+texture = ExtResource("3_cbe8q")
+offset = Vector2(0, -9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740785808]
 shape = SubResource("RectangleShape2D_1x1p0")
@@ -83,9 +119,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -85.0
-offset_top = -150.0
+offset_top = -112.0
 offset_right = 85.0
-offset_bottom = -134.0
+offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
@@ -96,4 +132,27 @@ theme_override_icons/grabber_disabled = SubResource("ImageTexture_tglgl")
 theme_override_icons/tick = SubResource("ImageTexture_nyscv")
 theme_override_styles/slider = SubResource("StyleBoxFlat_fc1h0")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_vftpg")
+value = 100.0
+
+[node name="ReloadBar" type="HSlider" parent="." unique_id=174502756]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = 96.0
+offset_right = 85.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 2
+theme_override_icons/grabber = SubResource("ImageTexture_rels8")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_cbe8q")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_8rgy7")
+theme_override_icons/tick = SubResource("ImageTexture_2ro7y")
+theme_override_styles/slider = SubResource("StyleBoxFlat_pnw4e")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ioseo")
 value = 100.0

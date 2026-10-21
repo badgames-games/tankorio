@@ -42,6 +42,38 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 6
 
+[sub_resource type="ImageTexture" id="ImageTexture_ydfla"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_30tft"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_fia26"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_13hum"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twhyw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qy67v"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
 [node name="PlayerTank" type="CharacterBody2D" unique_id=1659152178 groups=["PlayerTank"]]
 collision_layer = 8
 collision_mask = 12
@@ -77,9 +109,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -85.0
-offset_top = -150.0
+offset_top = -112.0
 offset_right = 85.0
-offset_bottom = -134.0
+offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
@@ -90,6 +122,29 @@ theme_override_icons/grabber_disabled = SubResource("ImageTexture_ash6w")
 theme_override_icons/tick = SubResource("ImageTexture_fx0sv")
 theme_override_styles/slider = SubResource("StyleBoxFlat_pu55u")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1x1p0")
+value = 100.0
+
+[node name="ReloadBar" type="HSlider" parent="." unique_id=1521951201]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = 96.0
+offset_right = 85.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 2
+theme_override_icons/grabber = SubResource("ImageTexture_ydfla")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_30tft")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_fia26")
+theme_override_icons/tick = SubResource("ImageTexture_13hum")
+theme_override_styles/slider = SubResource("StyleBoxFlat_twhyw")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_qy67v")
 value = 100.0
 
 [node name="Button" type="Button" parent="." unique_id=828386304]

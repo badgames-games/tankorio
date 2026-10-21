@@ -1,2 +1,6 @@
 res://Scenes/player_tank.tscn
+res://Scenes/enemy_tank.tscn
+res://Scripts/enemy_tank.gd
 res://Scripts/player_tank.gd
+res://Scenes/bullet.tscn
+res://Scripts/ui.gd

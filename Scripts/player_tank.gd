@@ -10,6 +10,7 @@ extends CharacterBody2D
 @onready var fight_radius: Area2D = $FightRadius
 @onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
 @onready var tank: Node2D = $Tank
+@onready var reload_bar: HSlider = $ReloadBar
 
 const SOVIET_FIRE_SOUND = preload("res://Assets/soviet fire sound.mp3")
 const BULLET = preload("uid://c1o2iwa80al23")
@@ -27,6 +28,7 @@ var very_slow_terrain := [
 ]
 
 var can_fire = true
+var reload_left: float = 0.0
 var health = 100
 
 var speed: float = 30000.0
@@ -106,7 +108,7 @@ var tank_turret_speed := {
 	"sheavy": 6,
 }
 
-var tank_type: String = "medium"
+var tank_type: String = "light"
 
 func _ready() -> void:
 	apply_tank_type()
@@ -128,8 +130,18 @@ func apply_tank_type() -> void:
 	new_shape.size = collision_shape_size[tank_type]
 	collision_shape_2d.shape = new_shape
 	
+	button.size = collision_shape_size[tank_type]
+	button.position = collision_shape_2d.position - collision_shape_size[tank_type] / 2
+	button.pivot_offset = collision_shape_size[tank_type] / 2
+	
 	health_bar.max_value = health
 	health_bar.value = health
+	
+	reload_bar.step = 0.01
+	reload_bar.max_value = reload_time
+	reload_bar.value = reload_time
+	reload_left = 0.0
+	can_fire = true
 
 
 func check_terrain() -> void:
@@ -143,9 +155,9 @@ func check_terrain() -> void:
 	var terrain_atlas_coords = terrain_layer.get_cell_atlas_coords(terrain_grid_pos)
 	
 	if slow_terrain.has(terrain_atlas_coords):
-		subtracted_speed = speed * 0.2
+		subtracted_speed = speed / 3.0
 	elif very_slow_terrain.has(terrain_atlas_coords):
-		subtracted_speed = speed * 0.4
+		subtracted_speed = speed * 2.0 / 3.0
 	else:
 		subtracted_speed = 0.0
 
@@ -154,6 +166,7 @@ func _physics_process(delta: float) -> void:
 	check_terrain()
 	
 	health_bar.rotation = 0
+	reload_bar.rotation = 0
 	
 	if Global.controlled_node == self:
 		var direction := Input.get_axis("move_left", "move_right")
@@ -177,9 +190,8 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("fire"):
 			if can_fire == true:
 				can_fire = false
+				reload_left = reload_time
 				inst()
-				await get_tree().create_timer(reload_time).timeout
-				can_fire = true
 		
 		move_and_slide()
 	else:
@@ -201,9 +213,8 @@ func _physics_process(delta: float) -> void:
 				
 				if angle_difference(turret.rotation, target_angle) < 0.05 and can_fire == true:
 					can_fire = false
+					reload_left = reload_time
 					inst()
-					await get_tree().create_timer(reload_time).timeout
-					can_fire = true
 		else:
 			velocity = Vector2.ZERO
 			turret.rotation = rotate_toward(turret.rotation, deg_to_rad(0), turret_rotate_speed * delta)
@@ -212,6 +223,14 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(delta: float) -> void:
+	if reload_left > 0:
+		reload_left -= delta
+		if reload_left <= 0:
+			reload_left = 0
+			can_fire = true
+	
+	reload_bar.value = reload_time - reload_left
+	
 	if health != health_bar.value:
 		if health <= 0:
 			if Global.controlled_node == self:
