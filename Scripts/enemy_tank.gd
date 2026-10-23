@@ -1,3 +1,5 @@
+# Sections of this were coded with AI
+
 extends CharacterBody2D
 
 @onready var scene: Node2D = $".."
@@ -5,14 +7,14 @@ extends CharacterBody2D
 @onready var fight_radius: Area2D = $FightRadius
 @onready var move_radius: Area2D = $MoveRadius
 @onready var tank_body: Sprite2D = $Tank/Body
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D"
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var health_bar: HSlider = $HealthBar
 @onready var reload_bar: HSlider = $ReloadBar
-@onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
+@onready var terrain_layer: TileMapLayer = $"../../GameNode/TerrainLayer"
 @onready var tank: Node2D = $Tank
-
-const SOVIET_FIRE_SOUND = preload("res://Assets/soviet fire sound.mp3")
+@onready var ray_cast: RayCast2D = $Tank/Turret/RayCast2D
+@onready var fire: AudioStreamPlayer2D = $Fire
 
 var slow_terrain := [
 	Vector2i(0, 0), Vector2i(0, 1), Vector2i(1, 0), Vector2i(1, 1), 
@@ -48,6 +50,8 @@ var current_state: State = State.IDLE
 
 var fight_bodies
 var move_bodies
+
+var move_playing: bool = false
 
 var tank_textures := {
 	"light": preload("res://Assets/Puma Hull - Light Tank - Nazi Germany.png"),
@@ -204,6 +208,7 @@ func _handle_movement_state(delta: float) -> void:
 		
 		tank_body.rotation = rotate_toward(tank_body.rotation, target_angle + deg_to_rad(90), ROTATE_SPEED * delta)
 		collision_shape_2d.rotation = rotate_toward(collision_shape_2d.rotation, target_angle + deg_to_rad(90), ROTATE_SPEED * delta)
+		turret.rotation = rotate_toward(turret.rotation, target_angle + deg_to_rad(90), turret_rotate_speed * delta)
 		
 		velocity = -tank_body.transform.y.normalized() * (speed - subtracted_speed) * delta
 
@@ -224,6 +229,11 @@ func _handle_fight_state(delta: float) -> void:
 			
 			
 			if angle_difference(turret.rotation, target_angle) < 0.05 and can_fire == true:
+				var collider_ray = ray_cast.get_collider()
+					
+				if collider_ray is CharacterBody2D:
+					return
+				
 				can_fire = false
 				reload_left = reload_time
 				inst()
@@ -262,15 +272,12 @@ func _process(delta: float) -> void:
 	
 	if health != health_bar.value:
 		if health <= 0:
-			if get_tree().get_nodes_in_group("EnemyTank").size() <= 1:
-				get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
 			queue_free()
 		health_bar.value = health
 
 
 func inst():
-	audio_stream_player_2d.stream = SOVIET_FIRE_SOUND
-	audio_stream_player_2d.play(0)
+	fire.play()
 	var instance = BULLET.instantiate()
 	instance.position = position
 	instance.rotation = turret.rotation

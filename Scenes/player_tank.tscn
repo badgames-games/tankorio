@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://d4iejy682ud28" path="res://Scripts/player_tank.gd" id="1_tvyc1"]
 [ext_resource type="Texture2D" uid="uid://b3ivchkyv8i1s" path="res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png" id="2_ydfla"]
 [ext_resource type="Texture2D" uid="uid://cmjxsvkjlfkbn" path="res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png" id="3_30tft"]
+[ext_resource type="AudioStream" uid="uid://dqma020m7lgt" path="res://Assets/Audio/soviet fire sound.mp3" id="4_fia26"]
+[ext_resource type="AudioStream" uid="uid://ce7rxi1i6qj7i" path="res://Assets/Audio/soviet move sound.mp3" id="5_13hum"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]
 size = Vector2(84, 164)
@@ -91,6 +93,10 @@ scale = Vector2(4, 4)
 texture = ExtResource("3_30tft")
 offset = Vector2(0, -14)
 
+[node name="RayCast2D" type="RayCast2D" parent="Tank/Turret" unique_id=508589471]
+target_position = Vector2(0, -200)
+collision_mask = 8
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740785808]
 shape = SubResource("RectangleShape2D_1x1p0")
 
@@ -162,5 +168,12 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+
+[node name="Fire" type="AudioStreamPlayer2D" parent="." unique_id=1353455256]
+stream = ExtResource("4_fia26")
+
+[node name="Move" type="AudioStreamPlayer2D" parent="." unique_id=1587109962]
+stream = ExtResource("5_13hum")
+volume_db = -8.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

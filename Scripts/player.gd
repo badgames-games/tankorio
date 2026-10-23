@@ -27,6 +27,7 @@ func _ready() -> void:
 		return
 	
 	await get_tree().process_frame
+	
 	while true:
 		await get_tree().create_timer(0.01).timeout
 		

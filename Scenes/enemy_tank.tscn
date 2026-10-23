@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bi6vsuopoy7n" path="res://Scripts/enemy_tank.gd" id="1_44s6k"]
 [ext_resource type="Texture2D" uid="uid://b4ovpegc6tibi" path="res://Assets/Maus Hull - Super Heavy Tank - Nazi Germany.png" id="2_rels8"]
 [ext_resource type="Texture2D" uid="uid://5qb4n1qwwivt" path="res://Assets/Maus Turret - Super Heavy Tank - Nazi Germany.png" id="3_cbe8q"]
+[ext_resource type="AudioStream" uid="uid://b110lwl5uchvo" path="res://Assets/Audio/firing sound.mp3" id="4_8rgy7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1x1p0"]
 size = Vector2(68, 180)
@@ -94,6 +95,10 @@ scale = Vector2(4, 4)
 texture = ExtResource("3_cbe8q")
 offset = Vector2(0, -9)
 
+[node name="RayCast2D" type="RayCast2D" parent="Tank/Turret" unique_id=1900258646]
+target_position = Vector2(0, -200)
+collision_mask = 4
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740785808]
 shape = SubResource("RectangleShape2D_1x1p0")
 
@@ -156,3 +161,7 @@ theme_override_icons/tick = SubResource("ImageTexture_2ro7y")
 theme_override_styles/slider = SubResource("StyleBoxFlat_pnw4e")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ioseo")
 value = 100.0
+
+[node name="Fire" type="AudioStreamPlayer2D" parent="." unique_id=811112447]
+stream = ExtResource("4_8rgy7")
+volume_db = -10.0

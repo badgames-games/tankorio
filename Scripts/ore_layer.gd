@@ -1,3 +1,5 @@
+# Sections of this were coded with AI
+
 extends TileMapLayer
 
 @onready var terrain_layer: TileMapLayer = $"../TerrainLayer"

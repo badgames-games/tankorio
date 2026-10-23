@@ -1,43 +1,56 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1792553041
+::res://::1792725404
 README.md::TextFile::-1::1787293767::0::1::::<><><>0<>0<><>::
 Tank Texture Reference Sheet.png::CompressedTexture2D::8979226349256758087::1792543258::1792543310::1::::<><><>0<>0<>811f8d53412a9a2ff24cdaf56d1634de<>res://.godot/imported/Tank Texture Reference Sheet.png-7244f54fe22c66fb63d16243832797ab.ctex::
-::res://Assets/::1792553482
+::res://Assets/::1792726720
 background.png::CompressedTexture2D::463221805475633904::1790132277::1790132306::1::::<><><>0<>0<>c4b5d5f0cd9bb415514ad2c666a55deb<>res://.godot/imported/background.png-c6e0edb6ae00a576ddf31b14f0c4bf17.ctex::
 badgames.png::CompressedTexture2D::4866205384214159695::1786941242::1787293827::1::::<><><>0<>0<>60955cb842f9909fd44a49fa871b9b78<>res://.godot/imported/badgames.png-c4653a0225ae34008e50f3c473c04be9.ctex::
+black.png::CompressedTexture2D::2604037242864063304::1792618820::1792618831::1::::<><><>0<>0<>5a3f2ed490b6c7e0d34679180e0a87e8<>res://.godot/imported/black.png-032a9d2901320f6b8befc36b4a47e75f.ctex::
+break.png::CompressedTexture2D::5758501325225385341::1792718901::1792719070::1::::<><><>0<>0<>accb64824b85ecdaea5b63e2e4c5c75b<>res://.godot/imported/break.png-45050c1f57a7792b0e61291046b47c7b.ctex::
 chromium.png::CompressedTexture2D::5628691155619445947::1792307028::1792307033::1::::<><><>0<>0<>1e1fded208f53ae7f22af4a8fbedc918<>res://.godot/imported/chromium.png-2008ed1435288085f23f1a98be570ff7.ctex::
 conveyerTemp.png::CompressedTexture2D::4799504757768964916::1786506928::1787293827::1::::<><><>0<>0<>5e726920a7f7f56b0780f07208615690<>res://.godot/imported/conveyerTemp.png-ab248b33cd287c0732976ddd7bb905f2.ctex::
 conveyor.png::CompressedTexture2D::2912934379043821406::1787631932::1787631946::1::::<><><>0<>0<>02d214ff33706ad080dee418948f4a67<>res://.godot/imported/conveyor.png-6ff4cc61b6ed94a79b8386af8f1e83f8.ctex::
 conveyorIcon.png::CompressedTexture2D::7923633669323973200::1787699865::1787699876::1::::<><><>0<>0<>f4ab1d283a479b5e581134467a01b830<>res://.godot/imported/conveyorIcon.png-895057aeb118050509fb22b46ae70d5c.ctex::
 CreditsButton.png::CompressedTexture2D::8525731915525486237::1790135135::1790135154::1::::<><><>0<>0<>83d57a4df6b0d780a1bbc192fb5c52de<>res://.godot/imported/CreditsButton.png-259b72d99a257432971b1d67d25eb15e.ctex::
+DeployButton.png::CompressedTexture2D::6723534451873053529::1792718544::1792718632::1::::<><><>0<>0<>8fb64b55eff44fabcb5f496541340618<>res://.godot/imported/DeployButton.png-8fafdda14ce6420fc8d55747756ebb8c.ctex::
+deploymentButton.png::CompressedTexture2D::6701995382791057025::1792718807::1792719070::1::::<><><>0<>0<>322053c297ab8b7ab8f7b80329d2e547<>res://.godot/imported/deploymentButton.png-1e1ba6271d17a64ae1490b4fc263f0cb.ctex::
 destroy.jpg::CompressedTexture2D::8739988346583739476::1787196691::1787622146::1::::<><><>0<>0<>d8e0a71186155bed8791f9385fdbccb9<>res://.godot/imported/destroy.jpg-a63081186185c3bd640958e233a0434a.ctex::
 FactoryIcon.png::CompressedTexture2D::1617956654500786873::1792307708::1792307720::1::::<><><>0<>0<>c06cf26a70faacbeb156160cd54998ac<>res://.godot/imported/FactoryIcon.png-3ba36a7d90604520939af3e7351750c8.ctex::
-firing sound.mp3::AudioStreamMP3::9000756990868857326::1791939377::1791939863::1::::<><><>0<>0<>dd6560d723edabdae6ca416f6f37a8d7<>res://.godot/imported/firing sound.mp3-3bfa4aebddae5cabb0502ecaf2313e63.mp3str::
 Gemini_Generated_Image_vqshzcvqshzcvqsh.jpeg::CompressedTexture2D::8827549323586051294::1786941265::1787293828::1::::<><><>0<>0<>7bd85c65aefd1fe4798fadb21f5cfd87<>res://.godot/imported/Gemini_Generated_Image_vqshzcvqshzcvqsh.jpeg-f73546428d15de25926446525d8e5de2.ctex::
-german move sound.mp3::AudioStreamMP3::1189698627453445608::1791939322::1791939863::1::::<><><>0<>0<>b40f7cac1e45fe3cfe1549e198e4cc7f<>res://.godot/imported/german move sound.mp3-da334493adbc2e4fff001f11359c010f.mp3str::
 Google_Chrome_Logo_2008.svg::CompressedTexture2D::2933965363995664165::1790736799::1790736802::1::::<><><>0<>0<>6472c33ce819b81b5299a117503272df<>res://.godot/imported/Google_Chrome_Logo_2008.svg-f2137f31ff6b24f634492bc8c8d053e7.ctex::
 green-grass-close-up.webp::CompressedTexture2D::2120730882700576309::1786442061::1787293828::1::::<><><>0<>0<>c85ff51747eff42ae712119163a77106<>res://.godot/imported/green-grass-close-up.webp-d3fbf54778d557908f7802555adcffcd.ctex::
+HeavyTank.png::CompressedTexture2D::5393686444838017123::1792624175::1792624203::1::::<><><>0<>0<>5a0ed9e50615e426a548cb8b41a186ca<>res://.godot/imported/HeavyTank.png-8ea9be20a6a780667d66641bad21ddcc.ctex::
+hotbar.png::CompressedTexture2D::2955855028552546202::1792718835::1792719070::1::::<><><>0<>0<>cd264c71e62a702f6643f8120e26dc2b<>res://.godot/imported/hotbar.png-24eaf9d9b5bfa9e2dcf2dcdf2b688051.ctex::
 icon.svg::CompressedTexture2D::8301253837879378899::1786441993::1787293827::1::::<><><>0<>0<>00a75cbb0fa1d5b5883a1a83f4c349e9<>res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.ctex::
 iron.png::CompressedTexture2D::9215036604780166464::1792306819::1792306827::1::::<><><>0<>0<>4d99e3854bbb9eb8725b93728fae86ca<>res://.godot/imported/iron.png-c5d0fdfbad5c5bfdbe5c2c07ad493221.ctex::
 IS-2 Hull - Heavy Tank - Soviet Union.png::CompressedTexture2D::6028741542898570970::1792544115::1792544192::1::::<><><>0<>0<>7de32c82e89d72da1a1f04e2b5a9e6de<>res://.godot/imported/IS-2 Hull - Heavy Tank - Soviet Union.png-bd4ec9faed127b21c9164b186f5d6e2a.ctex::
 IS-2 Turret - Heavy Tank - Soviet Union.png::CompressedTexture2D::2994411861716161376::1792544120::1792544192::1::::<><><>0<>0<>3bd73dc0e3ea9c3df3d74dbca66ed122<>res://.godot/imported/IS-2 Turret - Heavy Tank - Soviet Union.png-b98f6eeee94c2f81e72f3e05cbe0beef.ctex::
+LightDeploy.png::CompressedTexture2D::7046815590226970855::1792624226::1792624948::1::::<><><>0<>0<>8b867ee0495ab8a7a19b5285c5ef100e<>res://.godot/imported/LightDeploy.png-13c644518b31d462b754830a43142f2a.ctex::
+loadSave.png::CompressedTexture2D::196364646079903180::1792617806::1792617837::1::::<><><>0<>0<>2f4c2e939523fb8d8a708b07cbf7c988<>res://.godot/imported/loadSave.png-9e5b34093cfc9e0946bdb857a2144db4.ctex::
 logo.png::CompressedTexture2D::2333743818035920519::1790132520::1790132528::1::::<><><>0<>0<>0d4ebfb1cd2beac9e845f1bef00b391b<>res://.godot/imported/logo.png-d03fba62c7db4186a5557663390ad40b.ctex::
 Machines.png::CompressedTexture2D::2324667085106902304::1790127312::1790923254::1::::<><><>0<>0<>88ba1b8b2351af754ed6551ae6e8325c<>res://.godot/imported/Machines.png-ed5c2d9ced9307e832cca9e8ec1f34a0.ctex::
+MainMenu.png::CompressedTexture2D::1218702766278808685::1792619176::1792619663::1::::<><><>0<>0<>c2ae9ed37ab8c8477f3ec93b1291d02f<>res://.godot/imported/MainMenu.png-b9a4d2533390cc00be6443041033f48c.ctex::
 Maus Hull - Super Heavy Tank - Nazi Germany.png::CompressedTexture2D::4452100501004826642::1792544127::1792544192::1::::<><><>0<>0<>f4f682dff1c4788ff4f32695f2e750d0<>res://.godot/imported/Maus Hull - Super Heavy Tank - Nazi Germany.png-b038a0b04b7066adf9e81eaece87b90d.ctex::
 Maus Turret - Super Heavy Tank - Nazi Germany.png::CompressedTexture2D::2138808581947643917::1792544134::1792544192::1::::<><><>0<>0<>cf0ea4f45f5716fc2fe1868c1daddb04<>res://.godot/imported/Maus Turret - Super Heavy Tank - Nazi Germany.png-cee802f7b7b0771efd73383be173e2f7.ctex::
+MediumDeploy.png::CompressedTexture2D::1535692325483903613::1792624192::1792624218::1::::<><><>0<>0<>8cd64cdd773b833eb1fc7d105d2ffd9a<>res://.godot/imported/MediumDeploy.png-e32544fe4560fc690a507256a1b240a9.ctex::
 miner.jpg::CompressedTexture2D::3159716381523101312::1789522518::1789522519::1::::<><><>0<>0<>c0d3a0ef2a6c294db9a63c56f8e6a8bf<>res://.godot/imported/miner.jpg-6ea6eea7625279bbd67f3d5b47d05045.ctex::
 MinerIcon.png::CompressedTexture2D::5543376997571149434::1792307599::1792307604::1::::<><><>0<>0<>91311af41dafe2700f84d06e37518f9e<>res://.godot/imported/MinerIcon.png-be7d9f776b7046d52ff7e12c4c872aef.ctex::
+NewSave.png::CompressedTexture2D::6918005678172372720::1792617825::1792617837::1::::<><><>0<>0<>b3f41f27b3741863e052700a4a8f5e60<>res://.godot/imported/NewSave.png-918dffc199bf79426d6a175ea267cd5f.ctex::
 ores.png::CompressedTexture2D::660030081905628068::1788998974::1790923238::1::::<><><>0<>0<>9405f5b83a12f87e5530c9d13cd94f01<>res://.godot/imported/ores.png-adb47b41a2959660c7604db1a93d51f9.ctex::
 Panther G Hull - Medium Tank - Nazi Germany.png::CompressedTexture2D::7309450080859560816::1792544142::1792544192::1::::<><><>0<>0<>09e46a69a4f7c0205176564fe2f1e112<>res://.godot/imported/Panther G Hull - Medium Tank - Nazi Germany.png-5a92efafec7cb11e4c62239eb9e6a08a.ctex::
 Panther G Turret - Medium Tank - Nazi Germany.png::CompressedTexture2D::6647793242749276823::1792544147::1792544192::1::::<><><>0<>0<>a837fc16903bc0f0f475c8c747780873<>res://.godot/imported/Panther G Turret - Medium Tank - Nazi Germany.png-9782f73864e840691cdff9aa6aecc170.ctex::
+pause.png::CompressedTexture2D::7516125520075213796::1792718926::1792719070::1::::<><><>0<>0<>54ca1722d52a3165a73abf94d6055318<>res://.godot/imported/pause.png-6cc586a6ad215b2f21a53cfa9aaa6b1d.ctex::
+pausedIcon.png::CompressedTexture2D::6440081148028249672::1792618280::1792618309::1::::<><><>0<>0<>dc588f9e2f6b8da33496bb7e57f51a7e<>res://.godot/imported/pausedIcon.png-4a320e0d0934efa90d5ccbba5be7ec30.ctex::
 playButton.png::CompressedTexture2D::2464083626106570736::1790132627::1790132633::1::::<><><>0<>0<>accc20f61f4061fa33954615c00a0139<>res://.godot/imported/playButton.png-1fe0cc453d7db59883bfa1e1741382d6.ctex::
+Player.png::CompressedTexture2D::5818359578211266835::1792726360::1792726368::1::::<><><>0<>0<>f49ba299b0528b551509c8e8343d395c<>res://.godot/imported/Player.png-54d4b13ac506f96b99814af866f299ae.ctex::
 Puma Hull - Light Tank - Nazi Germany.png::CompressedTexture2D::7638217599912255706::1792544150::1792544192::1::::<><><>0<>0<>48cd49312f9aec75f1a71806885d8e94<>res://.godot/imported/Puma Hull - Light Tank - Nazi Germany.png-04378c0a4263e314bd6d23d4922da26a.ctex::
 Puma Turret - Light Tank - Nazi Germany.png::CompressedTexture2D::3279075839736672182::1792544154::1792544192::1::::<><><>0<>0<>89fc5090a3bf3879c4d044e9b4aa6caa<>res://.godot/imported/Puma Turret - Light Tank - Nazi Germany.png-2b75cc898e8723cb100a4d9214fbfc4c.ctex::
-QuitButton.png::CompressedTexture2D::3831771058355052425::1790135151::1790135154::1::::<><><>0<>0<>7dc77f178fb60a48515959145c6dba53<>res://.godot/imported/QuitButton.png-c4401500943a6343c6a5a795f21fa3fa.ctex::
+QuitButton.png::CompressedTexture2D::3831771058355052425::1792617885::1792617891::1::::<><><>0<>0<>7dc77f178fb60a48515959145c6dba53<>res://.godot/imported/QuitButton.png-c4401500943a6343c6a5a795f21fa3fa.ctex::
+saveGame.png::CompressedTexture2D::4895508656299973709::1792619162::1792619663::1::::<><><>0<>0<>6b4018e624fc96bb3f9d6c76fee74ca2<>res://.godot/imported/saveGame.png-ff52fb46f6e3227f6d570321ce88c80d.ctex::
 settingsButton.png::CompressedTexture2D::2926953686945437850::1790135065::1790135070::1::::<><><>0<>0<>1f97f70fc4c747f15a825105bdb54e5b<>res://.godot/imported/settingsButton.png-99f19303fb3fd3f6a2df7ca79660b07e.ctex::
-soviet fire sound.mp3::AudioStreamMP3::7972128190258739473::1791939380::1791939863::1::::<><><>0<>0<>ebda6935b60fabe8f275ef7e47f821ab<>res://.godot/imported/soviet fire sound.mp3-252c0092f93a691e150b378575121def.mp3str::
-soviet move sound.mp3::AudioStreamMP3::579571254000078847::1791939383::1791939863::1::::<><><>0<>0<>6e313adef39c4191c1a3f194cc434f40<>res://.godot/imported/soviet move sound.mp3-bc99d6395cd09cad08bd345c65929016.mp3str::
+SHeavyDeploy.png::CompressedTexture2D::2413987771258056231::1792624157::1792624203::1::::<><><>0<>0<>2c66056a8dec3288ff2e928868432d39<>res://.godot/imported/SHeavyDeploy.png-3550ce69612241528a444d640c3eb3a2.ctex::
 Soviet_Znamya_Pobedy.svg::CompressedTexture2D::6665873627072482221::1792299017::1792299019::1::::<><><>0<>0<>04e59a167b87ea9c18b2915a34dc8107<>res://.godot/imported/Soviet_Znamya_Pobedy.svg-fc06edc4a2ca362350f673213598f511.ctex::
+startWave.png::CompressedTexture2D::981896197623912356::1792718940::1792719070::1::::<><><>0<>0<>5c70c38489b17ad3bea9f7706e8dd5c6<>res://.godot/imported/startWave.png-8a933fa0d19d328e9a29e885dd2dea82.ctex::
 T-10M Hull - Modern Heavy Tank - Soviet Union.png::CompressedTexture2D::4369502340257707134::1792544157::1792544192::1::::<><><>0<>0<>fd358a527f5a33ffbf782079db4382f3<>res://.godot/imported/T-10M Hull - Modern Heavy Tank - Soviet Union.png-80612f4e472e4d14a1a55f6472f9fe08.ctex::
 T-10M Turret - Modern Heavy Tank - Soviet Union.png::CompressedTexture2D::5635116644815269327::1792544164::1792544192::1::::<><><>0<>0<>4316e59d89f409a8f5c23c75d5f21e97<>res://.godot/imported/T-10M Turret - Modern Heavy Tank - Soviet Union.png-07f217e7661af8a3ba03781509d488f3.ctex::
 T-34-85-M Hull - Medium Tank - Soviet Union.png::CompressedTexture2D::226518821442632550::1792544170::1792544192::1::::<><><>0<>0<>3115941aa538cc553043616e96ee5945<>res://.godot/imported/T-34-85-M Hull - Medium Tank - Soviet Union.png-4a83cf99af74447e2d8fc447bd528a91.ctex::
@@ -59,39 +72,60 @@ tree3.png::CompressedTexture2D::9200707594176569164::1787271858::1787293827::1::
 tree4.png::CompressedTexture2D::490908996687450354::1787271873::1787293827::1::::<><><>0<>0<>ea9b1ef261364819310a6a5ad393f9cc<>res://.godot/imported/tree4.png-9aba3d877a8a6b63b93705171da77ffc.ctex::
 tree5.png::CompressedTexture2D::5880428814170240586::1787271883::1787293827::1::::<><><>0<>0<>a819038eac57172ccc9ca93eeb9c91d2<>res://.godot/imported/tree5.png-3a47bb4aba45336262e452319d2374ef.ctex::
 tree6.png::CompressedTexture2D::209774950926500347::1787271899::1787293827::1::::<><><>0<>0<>ab1f94a2af72835545150835078de27f<>res://.godot/imported/tree6.png-7fe72aa18d7787e4cf520cee20b961d5.ctex::
+unpause.png::CompressedTexture2D::9157165282792665265::1792619151::1792619663::1::::<><><>0<>0<>249593093675435125e85b1377856bba<>res://.godot/imported/unpause.png-b681def15c074a298ce7c5ac312e8c44.ctex::
+victory screen.png::CompressedTexture2D::3042589608835052058::1792726709::1792726720::1::::<><><>0<>0<>ceb9a7c728e55c59680f8ddac7841847<>res://.godot/imported/victory screen.png-4d7e127108bed82a861ce2d4696de093.ctex::
+wave1.png::CompressedTexture2D::5458713422490103368::1792719009::1792719070::1::::<><><>0<>0<>9db5cb83b5f5522e614d822bfa00825d<>res://.godot/imported/wave1.png-5967f232cd4cd0c647525c1cdb7363c4.ctex::
+wave2.png::CompressedTexture2D::3126113458248727855::1792719018::1792719070::1::::<><><>0<>0<>f4dbbc2937eea284ba90492cd5da8ce3<>res://.godot/imported/wave2.png-bdf9f21bc5df0e06086a80d9de832ad9.ctex::
+wave3.png::CompressedTexture2D::1100878757340954254::1792719035::1792719070::1::::<><><>0<>0<>46e34974b86fd868738097375c1eb332<>res://.godot/imported/wave3.png-77bcb92e321d565c98a8f09f204506c6.ctex::
+wave4.png::CompressedTexture2D::6891366009140908737::1792719049::1792719070::1::::<><><>0<>0<>947891e605cf2b0fa765393b9a0df3c1<>res://.godot/imported/wave4.png-317d94a2e4eb224747c690b23e2ac1e9.ctex::
+wave5.png::CompressedTexture2D::9181692976908311240::1792719060::1792719070::1::::<><><>0<>0<>dba50442e6900961e3ea0f085b386567<>res://.godot/imported/wave5.png-750f77070f21f3a9002f402cbfbe0e72.ctex::
 WorldTerrain.png::CompressedTexture2D::8701300572935387725::1787099683::1790923231::1::::<><><>0<>0<>aee52767cb0d1c02c36a5cb088bf8cce<>res://.godot/imported/WorldTerrain.png-3e4d6db9cb49ba03627e9b681c406e12.ctex::
-::res://Scenes/::1792553430
-bullet.tscn::PackedScene::6628307392734308878::1792544900::0::1::::<><><>0<>0<><>::uid://dxpfokgohx2dy::::res://Scripts/bullet.gd<>uid://bkkiwbqs16iys::::res://Assets/Tank Round.png
-enemy_tank.tscn::PackedScene::1976799711027587814::1792553430::0::1::::<><><>0<>0<><>::uid://bi6vsuopoy7n::::res://Scripts/enemy_tank.gd<>uid://blp1pq3tvd5h2::::res://Assets/Tiger II Hull - Heavy Tank - Nazi Germany.png<>uid://dd16cjqdeswav::::res://Assets/Tiger II Turret - Heavy Tank - Nazi Germany.png
-game.tscn::PackedScene::497805388789323122::1792303304::0::1::::<><><>0<>0<><>::uid://dv78fcoukqjtd::::res://Assets/WorldTerrain.png<>uid://2kgtmbio5ios::::res://Scripts/game.gd<>uid://c6yja5hd1few1::::res://Scenes/player.tscn<>uid://bwjg3gc06i3ri::::res://Scripts/terrain_layer.gd<>uid://bhrbur2m6723k::::res://Assets/conveyor.png<>uid://jnyump1q25gi::::res://Assets/ores.png<>uid://bfdu3p231usn6::::res://Scripts/building_layer.gd<>uid://doxfdw31wl34a::::res://Scripts/ore_layer.gd<>uid://buuuxhl3up1g::::res://Scenes/ui.tscn<>uid://8ec6r51mophg::::res://Assets/Machines.png<>uid://cllwl2xv65wn1::::res://Scenes/loading.tscn
-game_over.tscn::PackedScene::6775325568270409460::1792299023::0::1::::<><><>0<>0<><>::uid://cuc7x4mywgwg5::::res://Scripts/game_over.gd
+::res://Assets/3D Models/::1792618635
+badGamesLogo.obj::Mesh::5325354578804279874::1778034441::1792618635::1::::<><><>0<>0<>8b012d2b3d4fc3aa0fa620fff6cf5cfd<>res://.godot/imported/badGamesLogo.obj-491baa2a13146e79f706e755fe024238.mesh<*>res://.godot/imported/badGamesLogo.obj-491baa2a13146e79f706e755fe024238.mesh::
+godot logo.glb::PackedScene::5506163288810207325::1705222248::1792618635::1::::<><><>0<>0<>64dbb71a6e2dc361abd331d5c6ce7b35<>res://.godot/imported/godot logo.glb-1042e84333fb147fc62cbf4c0408df3a.scn::
+::res://Assets/Audio/::1792726971
+Click Sound Effect.mp3::AudioStreamMP3::8288792711894056772::1792656927::1792701137::1::::<><><>0<>0<>73838bfd863140d11c727afe3da7c6d9<>res://.godot/imported/Click Sound Effect.mp3-bccadde55026feaf4135ffcca2544c4a.mp3str::
+Cloak and Dagger [82fHw5FVw38].mp3::AudioStreamMP3::7120132607705899028::1792656388::1792701137::1::::<><><>0<>0<>37f03c1933b82300603d0b160ec58198<>res://.godot/imported/Cloak and Dagger [82fHw5FVw38].mp3-5e276365d45b3bd8e7eb6d4f273fc274.mp3str::
+firing sound.mp3::AudioStreamMP3::4266543182336041284::1792656388::1792701137::1::::<><><>0<>0<>41a369d466d59277de9ea5b011456c15<>res://.godot/imported/firing sound.mp3-ee106cdcafd770f7cbecb0890baf93c2.mp3str::
+german move sound.mp3::AudioStreamMP3::4639911166121150682::1792656388::1792701137::1::::<><><>0<>0<>46a29362120b8911e184a4121e472fb4<>res://.godot/imported/german move sound.mp3-ebad05b9a4035e8087c3033f4c395b30.mp3str::
+soviet fire sound.mp3::AudioStreamMP3::244326534838916267::1792656388::1792701137::1::::<><><>0<>0<>a6580cd2e9779da350cd96abcb065e44<>res://.godot/imported/soviet fire sound.mp3-60eb90dd8a9bebfb02c76509ac53b824.mp3str::
+soviet move sound.mp3::AudioStreamMP3::5120730552962353116::1792657138::1792701137::1::::<><><>0<>0<>f3c4d0193904d661a6e669692dded3b8<>res://.godot/imported/soviet move sound.mp3-1c0b4db4866a90360eec4dd1995bf66e.mp3str::
+Soviet National Anthem Bass Boosted [3qxX5KhCpTk].mp3::AudioStreamMP3::704955768727161614::1792726966::1792726972::1::::<><><>0<>0<>390376d29651566ff86eefafe6fd3d6f<>res://.godot/imported/Soviet National Anthem Bass Boosted [3qxX5KhCpTk].mp3-a91792ee6097fc818c756b680ed4c83f.mp3str::
+Tankorio Menu Theme.mp3::AudioStreamMP3::8297507750609572688::1792656388::1792701137::1::::<><><>0<>0<>47188093b653f070469110cdf20765cb<>res://.godot/imported/Tankorio Menu Theme.mp3-88fca1b1efbc13a6da57f6fc0967acce.mp3str::
+::res://Scenes/::1792726949
+bullet.tscn::PackedScene::6628307392734308878::1792656555::0::1::::<><><>0<>0<><>::uid://dxpfokgohx2dy::::res://Scripts/bullet.gd<>uid://bkkiwbqs16iys::::res://Assets/Tank Round.png
+enemy_tank.tscn::PackedScene::1976799711027587814::1792718404::0::1::::<><><>0<>0<><>::uid://bi6vsuopoy7n::::res://Scripts/enemy_tank.gd<>uid://b4ovpegc6tibi::::res://Assets/Maus Hull - Super Heavy Tank - Nazi Germany.png<>uid://5qb4n1qwwivt::::res://Assets/Maus Turret - Super Heavy Tank - Nazi Germany.png<>uid://b110lwl5uchvo::::res://Assets/Audio/firing sound.mp3
+game.tscn::PackedScene::497805388789323122::1792718354::0::1::::<><><>0<>0<><>::uid://dv78fcoukqjtd::::res://Assets/WorldTerrain.png<>uid://2kgtmbio5ios::::res://Scripts/game.gd<>uid://c6yja5hd1few1::::res://Scenes/player.tscn<>uid://bwjg3gc06i3ri::::res://Scripts/terrain_layer.gd<>uid://bhrbur2m6723k::::res://Assets/conveyor.png<>uid://jnyump1q25gi::::res://Assets/ores.png<>uid://bfdu3p231usn6::::res://Scripts/building_layer.gd<>uid://doxfdw31wl34a::::res://Scripts/ore_layer.gd<>uid://buuuxhl3up1g::::res://Scenes/ui.tscn<>uid://8ec6r51mophg::::res://Assets/Machines.png<>uid://cllwl2xv65wn1::::res://Scenes/loading.tscn
+game_over.tscn::PackedScene::6775325568270409460::1792701325::0::1::::<><><>0<>0<><>::uid://cuc7x4mywgwg5::::res://Scripts/game_over.gd<>uid://c2edkfy7r885::::res://Assets/loadSave.png<>uid://rml4eedxfjrp::::res://Assets/MainMenu.png
 item.tscn::PackedScene::4272448910984017781::1792307350::0::1::::<><><>0<>0<><>::uid://d4j3komr3m057::::res://Assets/iron.png<>uid://2o1gh51r2g1t::::res://Scripts/item.gd<>uid://cmgtyrpbqjxm6::::res://Assets/chromium.png
-loading.tscn::PackedScene::5568983674930762732::1792476440::0::1::::<><><>0<>0<><>::uid://dvseidps6kvdl::::res://Scripts/loading.gd
+loading.tscn::PackedScene::5568983674930762732::1792701951::0::1::::<><><>0<>0<><>::uid://dvseidps6kvdl::::res://Scripts/loading.gd
+logo.tscn::PackedScene::8308726435324058462::1792618824::0::1::::<><><>0<>0<><>::uid://di844dbia4hy6::::res://Scripts/logo.gd<>uid://ch4v2urxuelig::::res://Assets/3D Models/badGamesLogo.obj<>uid://ckphx74vrfn5v::::res://Assets/3D Models/godot logo.glb
 machine.tscn::PackedScene::5880485060054721841::1792307384::0::1::::<><><>0<>0<><>::uid://c2slpienrh054::::res://Scripts/machine.gd
-main_menu.tscn::PackedScene::5838793402029429009::1792482466::0::1::::<><><>0<>0<><>::uid://gungv7kn1g1e::::res://Assets/background.png<>uid://s81ic0ysffyr::::res://Scripts/main_menu.gd<>uid://8iqojgvmhhvj::::res://Assets/logo.png<>uid://bbdvdkq4ltbpg::::res://Assets/playButton.png<>uid://bhx3q8r6bsu5o::::res://Assets/settingsButton.png<>uid://dtp6tah4qb8uj::::res://Assets/CreditsButton.png<>uid://buueyegjsdga0::::res://Assets/QuitButton.png
-player.tscn::PackedScene::6998788625882926974::1792215027::0::1::::<><><>0<>0<><>::uid://80cmrrmnohhk::::res://Scripts/player.gd<>uid://dqjgo5gq3a7id::::res://Assets/icon.svg
-player_tank.tscn::PackedScene::4990436365923172377::1792553215::0::1::::<><><>0<>0<><>::uid://d4iejy682ud28::::res://Scripts/player_tank.gd<>uid://b3ivchkyv8i1s::::res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png<>uid://cmjxsvkjlfkbn::::res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png
+main_menu.tscn::PackedScene::5838793402029429009::1792726176::0::1::::<><><>0<>0<><>::uid://gungv7kn1g1e::::res://Assets/background.png<>uid://s81ic0ysffyr::::res://Scripts/main_menu.gd<>uid://8iqojgvmhhvj::::res://Assets/logo.png<>uid://c2edkfy7r885::::res://Assets/loadSave.png<>uid://c5tesppw1bx4s::::res://Assets/NewSave.png<>uid://buueyegjsdga0::::res://Assets/QuitButton.png<>uid://dqhm0f4tcmosu::::res://Assets/Audio/Tankorio Menu Theme.mp3
+player.tscn::PackedScene::6998788625882926974::1792726554::0::1::::<><><>0<>0<><>::uid://80cmrrmnohhk::::res://Scripts/player.gd<>uid://co5psdg2rrl4v::::res://Assets/Player.png
+player_tank.tscn::PackedScene::4990436365923172377::1792704872::0::1::::<><><>0<>0<><>::uid://d4iejy682ud28::::res://Scripts/player_tank.gd<>uid://b3ivchkyv8i1s::::res://Assets/T-10M Hull - Modern Heavy Tank - Soviet Union.png<>uid://cmjxsvkjlfkbn::::res://Assets/T-10M Turret - Modern Heavy Tank - Soviet Union.png<>uid://dqma020m7lgt::::res://Assets/Audio/soviet fire sound.mp3<>uid://ce7rxi1i6qj7i::::res://Assets/Audio/soviet move sound.mp3
+victory_screen.tscn::PackedScene::9206443653235849299::1792726949::0::1::::<><><>0<>0<><>::uid://iadldi0yleqh::::res://Scripts/victory_screen.gd<>uid://bjl4ahk1qoxeg::::res://Assets/victory screen.png<>uid://rml4eedxfjrp::::res://Assets/MainMenu.png
 tank_test_scene.tscn::PackedScene::5418085679558338152::1792215099::0::1::::<><><>0<>0<><>::uid://728egs0hwf61::::res://Scripts/tank_test_scene.gd<>uid://cddn01b7a7g3j::::res://Scenes/player_tank.tscn<>uid://3ftuqn1ky4pu::::res://Scenes/enemy_tank.tscn
 tree.tscn::PackedScene::107491368902028399::1787273504::0::1::::<><><>0<>0<><>::uid://dkrhegl3klc0h::::res://Scripts/tree.gd
-ui.tscn::PackedScene::112727673841350710::1792366535::0::1::::<><><>0<>0<><>::uid://c6eplqudfh5bv::::res://Scripts/ui.gd<>uid://dk5jda0gy4erw::::res://Assets/conveyorIcon.png<>uid://bhrbur2m6723k::::res://Assets/conveyor.png<>uid://d4j3komr3m057::::res://Assets/iron.png<>uid://8ec6r51mophg::::res://Assets/Machines.png<>uid://dwryli2eikleq::::res://Assets/destroy.jpg<>uid://ck8iuykca3b7w::::res://Assets/MinerIcon.png<>uid://xb0rlh1dp5tt::::res://Assets/FactoryIcon.png<>uid://cmgtyrpbqjxm6::::res://Assets/chromium.png<>uid://dtesx437yqru5::::res://Assets/tk_photo_2025_06-2025_2025-06-burger-doneness-guide_burger-doneness-guide-0195.jpg<>uid://dipeju012aswy::::res://Assets/The-10-Most-Bizarre-Tanks-Ever-Built-7.jpg<>uid://cxieog2o5rexq::::res://Assets/thediplomat_2015-07-27_16-29-04.jpg<>uid://c17872ig407gj::::res://Assets/Soviet_Znamya_Pobedy.svg
-victory_screen.tscn::PackedScene::9206443653235849299::1792300953::0::1::::<><><>0<>0<><>::uid://iadldi0yleqh::::res://Scripts/victory_screen.gd<>uid://c17872ig407gj::::res://Assets/Soviet_Znamya_Pobedy.svg
-::res://Scripts/::1792553430
-building_layer.gd::GDScript::2744823208097824033::1792550329::0::1::::<>TileMapLayer<><>0<>0<><>::
-bullet.gd::GDScript::8804900242292159058::1792550327::0::1::::<>Area2D<><>0<>0<><>::
-enemy_tank.gd::GDScript::88624571091384781::1792553430::0::1::::<>CharacterBody2D<><>0<>0<><>::
-game.gd::GDScript::1916141420016651038::1792303211::0::1::::<>Node2D<><>0<>0<><>::
-game_over.gd::GDScript::6182732555518227026::1792298530::0::1::::<>Control<><>0<>0<><>::
-global.gd::GDScript::7941339802069941862::1792215834::0::1::::<>Node<><>0<>0<><>::
-item.gd::GDScript::1925589838571759943::1790746140::0::1::::<>Area2D<><>0<>0<><>::
+ui.tscn::PackedScene::112727673841350710::1792726332::0::1::::<><><>0<>0<><>::uid://c6eplqudfh5bv::::res://Scripts/ui.gd<>uid://bhrbur2m6723k::::res://Assets/conveyor.png<>uid://d4j3komr3m057::::res://Assets/iron.png<>uid://8ec6r51mophg::::res://Assets/Machines.png<>uid://bid3rasiv36ha::::res://Assets/hotbar.png<>uid://cobpw742qpevl::::res://Assets/break.png<>uid://dfc4qvrmf0fds::::res://Assets/pause.png<>uid://cmgtyrpbqjxm6::::res://Assets/chromium.png<>uid://n8vxmcvkhpdk::::res://Assets/startWave.png<>uid://cx0vgwd433swu::::res://Assets/pausedIcon.png<>uid://c2qq5c2ooj6c0::::res://Assets/deploymentButton.png<>uid://d3p2f6r3eg7d2::::res://Assets/unpause.png<>uid://cb0okvbxeyd6d::::res://Assets/saveGame.png<>uid://rml4eedxfjrp::::res://Assets/MainMenu.png<>uid://dqdfg76vt3pxk::::res://Assets/Audio/Click Sound Effect.mp3<>uid://c7nsa13ttwda2::::res://Assets/LightDeploy.png<>uid://c8pbsqu53m47a::::res://Assets/Audio/Cloak and Dagger [82fHw5FVw38].mp3
+::res://Scripts/::1792726843
+building_layer.gd::GDScript::2744823208097824033::1792621095::0::1::::<>TileMapLayer<><>0<>0<><>::
+bullet.gd::GDScript::8804900242292159058::1792656514::0::1::::<>Area2D<><>0<>0<><>::
+enemy_tank.gd::GDScript::88624571091384781::1792723694::0::1::::<>CharacterBody2D<><>0<>0<><>::
+game.gd::GDScript::1916141420016651038::1792621597::0::1::::<>Node2D<><>0<>0<><>::
+game_over.gd::GDScript::6182732555518227026::1792701322::0::1::::<>Control<><>0<>0<><>::
+global.gd::GDScript::7941339802069941862::1792725591::0::1::::<>Node<><>0<>0<><>::
+item.gd::GDScript::1925589838571759943::1792648928::0::1::::<>Area2D<><>0<>0<><>::
 loading.gd::GDScript::8670643902975162373::1790136482::0::1::::<>Control<><>0<>0<><>::
-machine.gd::GDScript::6705794045994859109::1792550328::0::1::::<>Area2D<><>0<>0<><>::
-main_menu.gd::GDScript::1333116724313240797::1792482430::0::1::::<>Control<><>0<>0<><>::
-ore_layer.gd::GDScript::8189696692680091330::1792303304::0::1::::<>TileMapLayer<><>0<>0<><>::
-player.gd::GDScript::2367985067140738324::1792303430::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player_tank.gd::GDScript::9211513788716511347::1792550610::0::1::::<>CharacterBody2D<><>0<>0<><>::
-save_manager.gd::GDScript::3523325477662104040::1792482399::0::1::::<>Node<><>0<>0<><>::
+logo.gd::GDScript::7790710006360491283::1792649239::0::1::::<>Node<><>0<>0<><>::
+machine.gd::GDScript::6705794045994859109::1792649725::0::1::::<>Area2D<><>0<>0<><>::
+main_menu.gd::GDScript::1333116724313240797::1792659581::0::1::::<>Control<><>0<>0<><>::
+ore_layer.gd::GDScript::8189696692680091330::1792618144::0::1::::<>TileMapLayer<><>0<>0<><>::
+player.gd::GDScript::2367985067140738324::1792701894::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_tank.gd::GDScript::9211513788716511347::1792704479::0::1::::<>CharacterBody2D<><>0<>0<><>::
+save_manager.gd::GDScript::3523325477662104040::1792726843::0::1::::<>Node<><>0<>0<><>::
 tank_test_scene.gd::GDScript::2303792343806254988::1791174371::0::1::::<>Node2D<><>0<>0<><>::
-terrain_layer.gd::GDScript::3949569267109656458::1792303333::0::1::::<>TileMapLayer<><>0<>0<><>::
+terrain_layer.gd::GDScript::3949569267109656458::1792718322::0::1::::<>TileMapLayer<><>0<>0<><>::
 tree.gd::GDScript::7896677404822568217::1787282131::0::1::::<>Sprite2D<><>0<>0<><>::
-ui.gd::GDScript::6957884301218884375::1792308071::0::1::::<>Control<><>0<>0<><>::
-victory_screen.gd::GDScript::561712714912393263::1792300025::0::1::::<>Control<><>0<>0<><>::
+ui.gd::GDScript::6957884301218884375::1792726818::0::1::::<>Control<><>0<>0<><>::
+victory_screen.gd::GDScript::561712714912393263::1792726778::0::1::::<>Control<><>0<>0<><>::

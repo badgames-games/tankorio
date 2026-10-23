@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kbqrvn0ctnys"
+path="res://.godot/imported/Soviet National Anthem Bass Boosted [3qxX5KhCpTk].mp3-a91792ee6097fc818c756b680ed4c83f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Soviet National Anthem Bass Boosted [3qxX5KhCpTk].mp3"
+dest_files=["res://.godot/imported/Soviet National Anthem Bass Boosted [3qxX5KhCpTk].mp3-a91792ee6097fc818c756b680ed4c83f.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

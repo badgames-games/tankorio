@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://gungv7kn1g1e" path="res://Assets/background.png" id="1_28flt"]
 [ext_resource type="Script" uid="uid://s81ic0ysffyr" path="res://Scripts/main_menu.gd" id="1_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://8iqojgvmhhvj" path="res://Assets/logo.png" id="2_48xlc"]
-[ext_resource type="Texture2D" uid="uid://bbdvdkq4ltbpg" path="res://Assets/playButton.png" id="3_opfnp"]
-[ext_resource type="Texture2D" uid="uid://bhx3q8r6bsu5o" path="res://Assets/settingsButton.png" id="4_cp0ys"]
-[ext_resource type="Texture2D" uid="uid://dtp6tah4qb8uj" path="res://Assets/CreditsButton.png" id="5_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://c2edkfy7r885" path="res://Assets/loadSave.png" id="5_opfnp"]
+[ext_resource type="Texture2D" uid="uid://c5tesppw1bx4s" path="res://Assets/NewSave.png" id="6_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://buueyegjsdga0" path="res://Assets/QuitButton.png" id="6_trj04"]
+[ext_resource type="AudioStream" uid="uid://dqhm0f4tcmosu" path="res://Assets/Audio/Tankorio Menu Theme.mp3" id="7_cp0ys"]
 
 [node name="MainMenu" type="Control" unique_id=1988525454]
 layout_mode = 3
@@ -32,60 +32,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -295.00003
-offset_right = 1391.0
-offset_bottom = 532.0
+offset_left = -253.00006
+offset_top = 16.0
+offset_right = 1433.0
+offset_bottom = 548.0
 grow_horizontal = 2
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_48xlc")
-
-[node name="PlayButton" type="TextureButton" parent="." unique_id=1569948667]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -111.0
-offset_top = -130.99994
-offset_right = 521.0
-offset_bottom = 117.00006
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.35, 0.35)
-texture_normal = ExtResource("3_opfnp")
-
-[node name="SettingsButton" type="TextureButton" parent="." unique_id=214279843]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -111.0
-offset_top = -42.99991
-offset_right = 521.0
-offset_bottom = 205.00012
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.35, 0.35)
-texture_normal = ExtResource("4_cp0ys")
-
-[node name="CreditsButton" type="TextureButton" parent="." unique_id=1690651368]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -111.0
-offset_top = 45.00006
-offset_right = 521.0
-offset_bottom = 293.00012
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.35, 0.35)
-texture_normal = ExtResource("5_yhxw7")
 
 [node name="QuitButton" type="TextureButton" parent="." unique_id=1756689658]
 layout_mode = 1
@@ -94,27 +47,50 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -111.0
-offset_top = 133.00006
-offset_right = 521.0
-offset_bottom = 381.00012
+offset_left = -132.0
+offset_top = 97.0
+offset_right = 624.0
+offset_bottom = 345.00012
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("6_trj04")
 
-[node name="NewSave" type="Button" parent="." unique_id=1905861028]
+[node name="LoadSave" type="TextureButton" parent="." unique_id=1759105292]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -31.0
-offset_right = 82.0
-grow_vertical = 0
-text = "New save"
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 3.0517578e-05
+offset_right = 624.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("5_opfnp")
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[node name="NewSave" type="TextureButton" parent="." unique_id=1439618986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -95.99994
+offset_right = 624.0
+offset_bottom = 152.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("6_cp0ys")
+
+[node name="MainTheme" type="AudioStreamPlayer2D" parent="." unique_id=521473669]
+stream = ExtResource("7_cp0ys")
+
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="LoadSave" to="." method="_on_load_save_pressed"]
 [connection signal="pressed" from="NewSave" to="." method="_on_new_save_pressed"]

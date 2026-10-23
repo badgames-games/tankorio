@@ -1,6 +1,8 @@
-res://Scenes/player_tank.tscn
-res://Scenes/enemy_tank.tscn
-res://Scripts/enemy_tank.gd
-res://Scripts/player_tank.gd
-res://Scenes/bullet.tscn
+res://Scenes/ui.tscn
+res://Scripts/global.gd
 res://Scripts/ui.gd
+res://Scenes/main_menu.tscn
+res://Scripts/save_manager.gd
+res://Scenes/player.tscn
+res://Scenes/victory_screen.tscn
+res://Scripts/victory_screen.gd

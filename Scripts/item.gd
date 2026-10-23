@@ -1,3 +1,5 @@
+# Sections of this were coded with AI
+
 extends Area2D
 
 @onready var building_layer: TileMapLayer = $"../../BuildingLayer"

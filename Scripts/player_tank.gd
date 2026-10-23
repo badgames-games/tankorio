@@ -1,18 +1,23 @@
+# Sections of this were coded with AI
+# Spike Forstyhe at spikeforythe.com A.K.A codifi, or prop codification™ came up and ideated the ray cast idea
+
 extends CharacterBody2D
 
 @onready var scene: Node2D = $".."
 @onready var turret: Sprite2D = $Tank/Turret
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D"
 @onready var health_bar: HSlider = $HealthBar
 @onready var tank_body: Sprite2D = $Tank/Body
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var button: Button = $Button
 @onready var fight_radius: Area2D = $FightRadius
-@onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
+@onready var terrain_layer: TileMapLayer = $"../../GameNode/TerrainLayer"
 @onready var tank: Node2D = $Tank
 @onready var reload_bar: HSlider = $ReloadBar
+@onready var ray_cast: RayCast2D = $Tank/Turret/RayCast2D
+@onready var fire: AudioStreamPlayer2D = $Fire
+@onready var move: AudioStreamPlayer2D = $Move
 
-const SOVIET_FIRE_SOUND = preload("res://Assets/soviet fire sound.mp3")
 const BULLET = preload("uid://c1o2iwa80al23")
 
 const ROTATE_SPEED = 2
@@ -37,6 +42,8 @@ var reload_time: float = 4.0
 var turret_rotate_speed: float = deg_to_rad(45)
 
 var subtracted_speed: float = 0.0
+
+var is_move_playing: bool = false
 
 var tank_textures := {
 	"light": preload("res://Assets/T-70 Hull - Light Tank - Soviet Union.png"),
@@ -182,10 +189,19 @@ func _physics_process(delta: float) -> void:
 		
 		if Input.is_action_pressed("move_up"):
 			velocity = -tank.transform.y * (speed - subtracted_speed) * delta
+			if not is_move_playing:
+				move.play()
+				is_move_playing = true
 		elif Input.is_action_pressed("move_down"):
 			velocity = tank.transform.y * ((speed - subtracted_speed) / 2) * delta
+			if not is_move_playing:
+				move.play()
+				is_move_playing = true
 		else:
 			velocity = Vector2(0, 0)
+			if is_move_playing:
+				move.stop()
+				is_move_playing = false
 		
 		if Input.is_action_just_pressed("fire"):
 			if can_fire == true:
@@ -212,6 +228,11 @@ func _physics_process(delta: float) -> void:
 				turret.rotation = rotate_toward(turret.rotation, target_angle + deg_to_rad(90), turret_rotate_speed * delta)
 				
 				if angle_difference(turret.rotation, target_angle) < 0.05 and can_fire == true:
+					var collider_ray = ray_cast.get_collider()
+					
+					if collider_ray is CharacterBody2D:
+						return
+					
 					can_fire = false
 					reload_left = reload_time
 					inst()
@@ -244,9 +265,8 @@ func _process(delta: float) -> void:
 
 
 func inst():
-	audio_stream_player_2d.stream = SOVIET_FIRE_SOUND
-	audio_stream_player_2d.play(0)
-	var instance = BULLET.instantiate()
+	fire.play()
+	var instance := BULLET.instantiate()
 	instance.position = position
 	instance.rotation = turret.rotation + tank.rotation
 	instance.damage = damage

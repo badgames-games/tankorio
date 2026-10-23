@@ -1,7 +1,9 @@
+# Sections of this were coded with AI
+
 extends TileMapLayer
 
 @onready var trees_node: Node2D = $"../Trees"
-@onready var loading: Control = $"../CanvasLayer/Loading"
+@onready var loading: Control = $"../../CanvasLayer/Loading"
 
 var map_size = Vector2(65536, 65536)
 
@@ -19,7 +21,6 @@ func _ready() -> void:
 		loading.queue_free()
 		return
 	
-	loading.show()
 	await get_tree().process_frame
 	position =- Vector2(map_size / 2)
 	

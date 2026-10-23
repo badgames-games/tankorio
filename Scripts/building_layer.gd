@@ -1,8 +1,11 @@
+# Sections of this were coded with AI
+
 extends TileMapLayer
 
 @onready var terrain_layer: TileMapLayer = $"../TerrainLayer"
-@onready var ui: Control = $"../CanvasLayer/UI"
 @onready var machines_node: Node2D = $"../Machines"
+@onready var ui: Control = $"../../CanvasLayer/UI"
+
 const MACHINE = preload("uid://cp1sy2vv7seqr")
 
 var allowed_terrain_atlas_coords := [

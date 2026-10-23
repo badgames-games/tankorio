@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d4fw1t4oqlymd"]
 
 [ext_resource type="Script" uid="uid://iadldi0yleqh" path="res://Scripts/victory_screen.gd" id="1_mubwb"]
-[ext_resource type="Texture2D" uid="uid://c17872ig407gj" path="res://Assets/Soviet_Znamya_Pobedy.svg" id="1_oq8vb"]
+[ext_resource type="Texture2D" uid="uid://bjl4ahk1qoxeg" path="res://Assets/victory screen.png" id="2_fmvqe"]
+[ext_resource type="Texture2D" uid="uid://rml4eedxfjrp" path="res://Assets/MainMenu.png" id="3_vrh3u"]
+[ext_resource type="AudioStream" uid="uid://kbqrvn0ctnys" path="res://Assets/Audio/Soviet National Anthem Bass Boosted [3qxX5KhCpTk].mp3" id="4_vrh3u"]
 
 [node name="VictoryScreen" type="Control" unique_id=602877927]
 layout_mode = 3
@@ -19,38 +21,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_oq8vb")
+texture = ExtResource("2_fmvqe")
 expand_mode = 5
 
-[node name="MainMenuButton" type="Button" parent="." unique_id=312422981]
+[node name="MainMenuButton" type="TextureButton" parent="." unique_id=1353829618]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -140.0
-offset_top = -15.5
-offset_right = -20.0
-offset_bottom = 15.5
+anchor_bottom = 1.0
+offset_left = -132.0
+offset_top = -184.0
+offset_right = 624.0
+offset_bottom = 64.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "To main menu"
+grow_vertical = 0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("3_vrh3u")
 
-[node name="QuitButton" type="Button" parent="." unique_id=1737935211]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.0
-offset_top = -15.5
-offset_right = 61.0
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Quit"
+[node name="Song" type="AudioStreamPlayer2D" parent="." unique_id=575145448]
+stream = ExtResource("4_vrh3u")
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

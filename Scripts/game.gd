@@ -1,14 +1,16 @@
+# All of this was coded with AI
+
 extends Node2D
 
 const ITEM = preload("uid://b14uuyn7dc2w4")
 
-@onready var terrain_layer: TileMapLayer = $TerrainLayer
-@onready var ore_layer: TileMapLayer = $OreLayer
-@onready var building_layer: TileMapLayer = $BuildingLayer
-@onready var player: CharacterBody2D = $Player
-@onready var machines_node: Node2D = $Machines
-@onready var items_node: Node2D = $Items
-@onready var trees_node: Node2D = $Trees
+@onready var terrain_layer: TileMapLayer = $GameNode/TerrainLayer
+@onready var ore_layer: TileMapLayer = $GameNode/OreLayer
+@onready var building_layer: TileMapLayer = $GameNode/BuildingLayer
+@onready var player: CharacterBody2D = $GameNode/Player
+@onready var machines_node: Node2D = $GameNode/Machines
+@onready var items_node: Node2D = $GameNode/Items
+@onready var trees_node: Node2D = $GameNode/Trees
 
 
 func _ready() -> void:

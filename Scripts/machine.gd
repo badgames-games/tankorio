@@ -1,3 +1,5 @@
+# Sections of this were coded with AI
+
 extends Area2D
 
 @onready var ore_layer: TileMapLayer = $"../../OreLayer"
@@ -10,7 +12,8 @@ var type: String
 var factory_type: String = "Factory_Light"
 var efficiency: int = 0
 
-var deployable_tanks: Array = []
+var steel_stored: int = 0
+var chromium_stored: int = 0
 
 var factory_tank_type := {
 	"Factory_Light": "light",
@@ -75,39 +78,48 @@ func _ready() -> void:
 	elif type == "factory":
 		while true:
 			var areas = input_checker.get_overlapping_areas()
-			var steel_items: Array = []
-			var chromium_items: Array = []
+			var counted_items: Array = []
 			
 			for area in areas:
-				print(area)
 				var item
 				if area.get_child(0) is CollisionShape2D:
 					item = area.get_parent()
 				elif area.get_child(0) is Sprite2D:
 					item = area
 				if item.is_in_group("Item"):
-					if steel_items.has(item) or chromium_items.has(item):
+					if counted_items.has(item):
 						continue
+					counted_items.append(item)
 					
 					# Steel is made from the Iron ore items
 					if item.type == "Iron":
-						steel_items.append(item)
+						steel_stored += 1
+						item.queue_free()
 					elif item.type == "Chromium":
-						chromium_items.append(item)
+						chromium_stored += 1
+						item.queue_free()
 			
 			var steel_needed: int = factory_steel_cost[factory_type]
 			var chromium_needed: int = factory_chromium_cost[factory_type]
 			
-			if steel_items.size() >= steel_needed and chromium_items.size() >= chromium_needed:
-				for i in steel_needed:
-					steel_items[i].queue_free()
-				for i in chromium_needed:
-					chromium_items[i].queue_free()
+			while steel_stored >= steel_needed and chromium_stored >= chromium_needed:
+				steel_stored -= steel_needed
+				chromium_stored -= chromium_needed
 				
-				deployable_tanks.append(factory_tank_type[factory_type])
+				match factory_tank_type[factory_type]:
+					"light":
+						Global.light_tanks += 1
+					"medium":
+						Global.medium_tanks += 1
+					"heavy":
+						Global.heavy_tanks += 1
+					"sheavy":
+						Global.sheavy_tanks += 1
+				
 				print("Tank created: ", factory_tank_type[factory_type])
 			
 			await get_tree().create_timer(0.1).timeout
+
 
 func item_inst(pos: Vector2, ore):
 	var instance = ITEM.instantiate()

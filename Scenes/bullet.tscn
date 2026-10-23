@@ -6,6 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycag2"]
 size = Vector2(4, 8)
 
+[sub_resource type="Curve" id="Curve_oduel"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Bullet" type="Area2D" unique_id=314195169]
 collision_layer = 12
 collision_mask = 12
@@ -13,8 +17,15 @@ script = ExtResource("1_xjght")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=934923530]
 rotation = 1.5707964
-scale = Vector2(4, 4)
+scale = Vector2(10, 10)
 texture = ExtResource("2_oduel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1206059893]
 shape = SubResource("RectangleShape2D_ycag2")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=512567933]
+position = Vector2(0, 9)
+
+[node name="Line2D" type="Line2D" parent="Marker2D" unique_id=929411746]
+width_curve = SubResource("Curve_oduel")
+default_color = Color(0, 0, 0, 0.76600003)
